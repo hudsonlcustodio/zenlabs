@@ -14,4 +14,10 @@ describe('Wave 2 mock planner', () => {
   it('blocks premium planning above the hard limit', () => {
     expect(() => new MockProductionPlanner().plan({ ...request, qualityPreference: 'PREMIUM' }, { id, tenantId: id, productionRequestId: id, hardLimitMinor: 100, reservedMinor: 0, currency: 'BRL', status: 'AUTHORIZED' })).toThrow('budget_guard_triggered');
   });
+  it('approves a plan only within the tenant policy and budget', () => {
+    const planner = new MockProductionPlanner();
+    const budget = { id, tenantId: id, productionRequestId: id, hardLimitMinor: 500, reservedMinor: 0, currency: 'BRL' as const, status: 'AUTHORIZED' as const };
+    const result = planner.plan(request, budget);
+    expect(planner.approve(request, result.plan, result.budget, { id, tenantId: id, qualityFloor: 'STANDARD', maxDurationSeconds: 30, requiresHumanApproval: true, version: 1 }).status).toBe('APPROVED');
+  });
 });

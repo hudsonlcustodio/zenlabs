@@ -42,7 +42,20 @@ export const productionPlanSchema = z.object({
   provenance: z.object({ planner: z.string().min(1), model: z.string().min(1), templateVersion: z.string().min(1), sourceRefs: z.array(z.string()).optional() }),
 });
 
+export const productionPolicySchema = z.object({
+  id: uuid, tenantId: uuid, qualityFloor: z.enum(['STANDARD', 'HIGH', 'PREMIUM']),
+  maxDurationSeconds: z.number().positive(), requiresHumanApproval: z.boolean(), version: z.number().int().positive(),
+});
+
+export const costEstimateSchema = z.object({
+  id: uuid, tenantId: uuid, productionRequestId: uuid, planId: uuid,
+  amountMinor: z.number().int().nonnegative(), currency: z.string().length(3).toUpperCase(), rateCardVersion: z.string().min(1),
+  status: z.enum(['DRAFT', 'AUTHORIZED', 'REJECTED']),
+});
+
 export type ProductionRequest = z.infer<typeof productionRequestSchema>;
 export type ProductionBudget = z.infer<typeof productionBudgetSchema>;
 export type Shot = z.infer<typeof shotSchema>;
 export type ProductionPlan = z.infer<typeof productionPlanSchema>;
+export type ProductionPolicy = z.infer<typeof productionPolicySchema>;
+export type CostEstimate = z.infer<typeof costEstimateSchema>;
