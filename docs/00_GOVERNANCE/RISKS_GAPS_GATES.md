@@ -48,6 +48,18 @@ Passa quando:
 - fitness verde;
 - dependency/security scan revisado.
 
+## GATE-IDENTITY-SLICE-001
+Passa quando:
+- contratos tenant-scoped publicados;
+- consentimento obrigatório para ativação;
+- revogação idempotente bloqueia novas ativações;
+- IdentityPack calibrado é pré-condição de ativação;
+- auditoria cobre criação, ativação e revogação;
+- testes, typecheck, lint e FF-04 verdes.
+
+Status: **APROVADO EM MEMÓRIA**. Persistência, autenticação HTTP e integração
+com providers permanecem fora deste gate.
+
 ## GATE-MEDIA-001
 Benchmark com mesma pessoa/voz/scripts mede:
 - identidade;

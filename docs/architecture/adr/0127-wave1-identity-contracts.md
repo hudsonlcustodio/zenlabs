@@ -1,6 +1,6 @@
 # ADR-0127 — Wave 1 identity contracts before persistence
 
-**Status:** Accepted for implementation
+**Status:** Accepted and implemented in memory
 
 ## Decision
 
@@ -26,4 +26,8 @@ domain.
 
 Contract tests cover the complete Tenant → Client → Consent → DigitalTwin →
 IdentityPack → AuditEvent chain and reject missing tenant scope or invalid
-consent state.
+consent state. Application tests additionally cover calibrated-pack activation,
+idempotent consent revocation, audit emission and post-revocation blocking.
+
+Residual risk: the in-memory store is not durable and the service is not yet
+bound to an authenticated HTTP surface; both are explicit follow-up gates.

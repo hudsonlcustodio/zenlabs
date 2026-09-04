@@ -5,6 +5,7 @@
 **Gate Zero:** GZ-C + GZ-D — evolução estrutural + auditoria/migração de repositório  
 **Mode:** FOUNDATION / ARCHITECTURE / REPO-AUDIT  
 **Current gate:** `GATE-TECH-FOUNDATION-001 = APROVADO`
+**Wave 1:** `IDENTITY-SLICE-001 = IMPLEMENTADA EM MEMÓRIA`
 
 ## Estado real
 
@@ -12,7 +13,11 @@
 
 [FATO VERIFICADO] O snapshot VYRA contém scaffold técnico útil: monorepo, API, web shell, workers, contracts, config, observability, CI, tests e fitness functions.
 
-[FATO VERIFICADO] O snapshot ainda não implementa os módulos de negócio centrais.
+[FATO VERIFICADO] O snapshot ainda não implementa os módulos de negócio centrais além da fatia de identidade da Wave 1.
+
+[FATO VERIFICADO] A Wave 1 implementa contratos e regras de aplicação para Tenant,
+Client, Consent, DigitalTwin, IdentityPack e AuditEvent, incluindo ativação
+condicionada a consentimento, revogação idempotente e isolamento por tenant.
 
 [DECISÃO APROVADA] O repositório VYRA original não será utilizado como origem do novo produto.
 
@@ -46,8 +51,8 @@
 
 ## Próxima ação
 
-Implementar a camada de aplicação do primeiro vertical slice sobre os contratos
-da Wave 1, com persistência mockada e sem providers reais.
+Preparar o contrato HTTP autenticado da fatia de identidade e o repositório
+tenant-scoped antes de qualquer provider real.
 
 ## Gate de UX aprovado
 
