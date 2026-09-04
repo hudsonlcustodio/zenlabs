@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "mode": "interactive",
+  "defaults": {
+    "primary_persona": "Sole tenant portal user of a managed audiovisual content operation, who is also the cloned identity owner and approves scripts and videos",
+    "cloud_provider": "aws",
+    "api_style": "REST",
+    "integration_style": "hybrid",
+    "ui_priority": "responsive",
+    "test_workflow": "test-after"
+  }
+}

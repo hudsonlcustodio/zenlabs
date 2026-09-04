@@ -1,0 +1,24 @@
+{
+  "name": "@zenlabs/config",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Environment schema and typed configuration loading.",
+  "license": "UNLICENSED",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "zenlabs": {
+    "kind": "package",
+    "architectureRef": "architecture.md §2.2",
+    "allowedDependencies": [
+      "@zenlabs/contracts"
+    ]
+  },
+  "dependencies": {
+    "@zenlabs/contracts": "workspace:*",
+    "zod": "3.25.76"
+  }
+}

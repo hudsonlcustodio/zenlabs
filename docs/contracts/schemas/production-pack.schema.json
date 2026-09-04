@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zenlabs.local/schemas/production-pack.schema.json",
+  "title": "ProductionPack",
+  "type": "object",
+  "required": [
+    "id",
+    "version",
+    "tier",
+    "allowedRoutingClasses",
+    "qualityTarget",
+    "ratios"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "tier": {
+      "type": "string",
+      "enum": [
+        "PRESENTER",
+        "DYNAMIC",
+        "PREMIUM",
+        "SIGNATURE"
+      ]
+    },
+    "allowedRoutingClasses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "qualityTarget": {
+      "type": "string",
+      "enum": [
+        "STANDARD",
+        "HIGH",
+        "PREMIUM"
+      ]
+    },
+    "ratios": {
+      "type": "object",
+      "required": [
+        "presenterMin",
+        "presenterMax"
+      ],
+      "properties": {
+        "presenterMin": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "presenterMax": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "brollMax": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "motionMax": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "deterministicVisualMax": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

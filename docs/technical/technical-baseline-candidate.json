@@ -1,0 +1,51 @@
+{
+  "status": "candidate",
+  "checkedAt": "2026-09-02",
+  "runtime": {
+    "node": "24.20.0",
+    "pnpm": "11.25.0"
+  },
+  "frontend": {
+    "next": "16.3.4",
+    "react": "19.2.8",
+    "reactDom": "19.2.8"
+  },
+  "preserveFirstSlice": {
+    "nestjs": "11.2.3",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7",
+    "zod": "3.25.76",
+    "zodToOpenApi": "7.3.4"
+  },
+  "data": {
+    "database": "PostgreSQL 17",
+    "rdsReferenceMinor": "17.11",
+    "queryLayer": "Drizzle ORM + pg",
+    "tenantIsolation": "tenant_id + PostgreSQL RLS"
+  },
+  "auth": {
+    "identityProvider": "Amazon Cognito User Pools",
+    "session": "opaque server-side PostgreSQL session",
+    "authorization": "ZENLABS application domain"
+  },
+  "async": {
+    "queue": "Amazon SQS Standard",
+    "dlq": true,
+    "delivery": "at-least-once",
+    "idempotencyRequired": true
+  },
+  "storage": {
+    "canonicalMedia": "Amazon S3 private",
+    "encryption": "SSE-KMS"
+  },
+  "compute": "Amazon ECS/Fargate",
+  "ciCd": "GitHub Actions OIDC -> AWS",
+  "observability": "OpenTelemetry traces/metrics + structured JSON logs",
+  "deferredGate": [
+    "NestJS 12",
+    "TypeScript 7",
+    "Vitest 4",
+    "Zod 4",
+    "pnpm 12"
+  ]
+}

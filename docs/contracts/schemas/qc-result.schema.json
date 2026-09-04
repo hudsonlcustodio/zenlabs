@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zenlabs.local/schemas/qc-result.schema.json",
+  "title": "QCResult",
+  "type": "object",
+  "required": [
+    "id",
+    "tenantId",
+    "targetType",
+    "targetId",
+    "verdict",
+    "dimensions",
+    "evaluator",
+    "evaluatedAt"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "tenantId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "targetType": {
+      "type": "string",
+      "enum": [
+        "SHOT",
+        "PRODUCTION"
+      ]
+    },
+    "targetId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "verdict": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "REPAIR",
+        "REGENERATE",
+        "HUMAN_REVIEW"
+      ]
+    },
+    "dimensions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "score"
+        ],
+        "properties": {
+          "score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "flags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "evaluator": {
+      "type": "object",
+      "required": [
+        "type",
+        "version"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "DETERMINISTIC",
+            "AI",
+            "HUMAN"
+          ]
+        },
+        "version": {
+          "type": "string"
+        },
+        "model": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "evaluatedAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,3781 @@
+{
+  "schema_version": 1,
+  "epics": {
+    "P1": {
+      "id": "P1",
+      "title": "Foundation — monorepo, boundaries, CI",
+      "status": "done",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P1.01",
+        "P1.02",
+        "P1.03",
+        "P1.04",
+        "P1.05",
+        "P1.06",
+        "P1.07",
+        "P1.08",
+        "P1.09",
+        "P1.10"
+      ],
+      "depends_on": [],
+      "total_stories": 10,
+      "completed_stories": 10
+    },
+    "P10": {
+      "id": "P10",
+      "title": "Intelligence engine",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P10.01",
+        "P10.02",
+        "P10.03",
+        "P10.04",
+        "P10.05",
+        "P10.06",
+        "P10.07",
+        "P10.08",
+        "P10.09"
+      ],
+      "depends_on": [
+        "P4",
+        "P6",
+        "P9"
+      ],
+      "total_stories": 9,
+      "completed_stories": 0
+    },
+    "P11": {
+      "id": "P11",
+      "title": "Voice and video generation",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P11.01",
+        "P11.02",
+        "P11.03",
+        "P11.04",
+        "P11.05",
+        "P11.06",
+        "P11.07",
+        "P11.08",
+        "P11.09",
+        "P11.10",
+        "P11.11"
+      ],
+      "depends_on": [
+        "P4",
+        "P6",
+        "P7",
+        "P8",
+        "P10"
+      ],
+      "total_stories": 11,
+      "completed_stories": 0
+    },
+    "P12": {
+      "id": "P12",
+      "title": "QA and approvals",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P12.01",
+        "P12.02",
+        "P12.03",
+        "P12.04",
+        "P12.05",
+        "P12.06"
+      ],
+      "depends_on": [
+        "P8",
+        "P11"
+      ],
+      "total_stories": 6,
+      "completed_stories": 0
+    },
+    "P13": {
+      "id": "P13",
+      "title": "Calendar and publishing",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P13.01",
+        "P13.02",
+        "P13.03",
+        "P13.04",
+        "P13.05",
+        "P13.06",
+        "P13.07",
+        "P13.08",
+        "P13.09",
+        "P13.10",
+        "P13.11",
+        "P13.12"
+      ],
+      "depends_on": [
+        "P4",
+        "P7",
+        "P8",
+        "P12"
+      ],
+      "total_stories": 12,
+      "completed_stories": 0
+    },
+    "P14": {
+      "id": "P14",
+      "title": "Performance",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P14.01",
+        "P14.02",
+        "P14.03",
+        "P14.04",
+        "P14.05",
+        "P14.06",
+        "P14.07",
+        "P14.08"
+      ],
+      "depends_on": [
+        "P13"
+      ],
+      "total_stories": 8,
+      "completed_stories": 0
+    },
+    "P15": {
+      "id": "P15",
+      "title": "Surfaces: Portal, Studio and Control",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P15.01",
+        "P15.02",
+        "P15.03",
+        "P15.04",
+        "P15.05",
+        "P15.06",
+        "P15.07",
+        "P15.08",
+        "P15.09",
+        "P15.10",
+        "P15.11",
+        "P15.12",
+        "P15.13",
+        "P15.14",
+        "P15.15",
+        "P15.16",
+        "P15.17",
+        "P15.18",
+        "P15.19",
+        "P15.20",
+        "P15.21",
+        "P15.22"
+      ],
+      "depends_on": [
+        "P3",
+        "P5",
+        "P6",
+        "P7",
+        "P8",
+        "P9",
+        "P10",
+        "P11",
+        "P12",
+        "P13",
+        "P14",
+        "P18",
+        "P19",
+        "P20"
+      ],
+      "total_stories": 22,
+      "completed_stories": 0
+    },
+    "P16": {
+      "id": "P16",
+      "title": "Operations: observability, retention, notifications and load",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P16.01",
+        "P16.02",
+        "P16.03",
+        "P16.04",
+        "P16.05",
+        "P16.06",
+        "P16.07",
+        "P16.08",
+        "P16.09",
+        "P16.10"
+      ],
+      "depends_on": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6",
+        "P7",
+        "P8",
+        "P9",
+        "P10",
+        "P11",
+        "P12",
+        "P13",
+        "P14",
+        "P15",
+        "P17",
+        "P18",
+        "P19",
+        "P20",
+        "P21",
+        "P22",
+        "P23",
+        "P24"
+      ],
+      "total_stories": 10,
+      "completed_stories": 0
+    },
+    "P17": {
+      "id": "P17",
+      "title": "Infrastructure as Code, environments and delivery pipeline",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P17.01",
+        "P17.02",
+        "P17.03",
+        "P17.04",
+        "P17.05",
+        "P17.06",
+        "P17.07",
+        "P17.08",
+        "P17.09",
+        "P17.10",
+        "P17.11",
+        "P17.12"
+      ],
+      "depends_on": [
+        "P1",
+        "P2"
+      ],
+      "total_stories": 12,
+      "completed_stories": 0
+    },
+    "P18": {
+      "id": "P18",
+      "title": "VYRA Design System foundation",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P18.01",
+        "P18.02",
+        "P18.03",
+        "P18.04",
+        "P18.05",
+        "P18.06",
+        "P18.07",
+        "P18.08",
+        "P18.09",
+        "P18.10",
+        "P18.11",
+        "P18.12",
+        "P18.13",
+        "P18.14",
+        "P18.15",
+        "P18.16"
+      ],
+      "depends_on": [
+        "P1"
+      ],
+      "total_stories": 16,
+      "completed_stories": 0
+    },
+    "P19": {
+      "id": "P19",
+      "title": "Experience component families: charts, grids, editor, media and drag",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P19.01",
+        "P19.02",
+        "P19.03",
+        "P19.04",
+        "P19.05",
+        "P19.06",
+        "P19.07",
+        "P19.08",
+        "P19.09"
+      ],
+      "depends_on": [
+        "P18"
+      ],
+      "total_stories": 9,
+      "completed_stories": 0
+    },
+    "P2": {
+      "id": "P2",
+      "title": "Data foundation and tenancy",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P2.01",
+        "P2.02",
+        "P2.03",
+        "P2.04",
+        "P2.05",
+        "P2.06",
+        "P2.07",
+        "P2.08",
+        "P2.09",
+        "P2.10",
+        "P2.11"
+      ],
+      "depends_on": [
+        "P1"
+      ],
+      "total_stories": 11,
+      "completed_stories": 0
+    },
+    "P20": {
+      "id": "P20",
+      "title": "Application shell, navigation and global experience",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P20.01",
+        "P20.02",
+        "P20.03",
+        "P20.04",
+        "P20.05",
+        "P20.06",
+        "P20.07",
+        "P20.08"
+      ],
+      "depends_on": [
+        "P3",
+        "P18",
+        "P19"
+      ],
+      "total_stories": 8,
+      "completed_stories": 0
+    },
+    "P21": {
+      "id": "P21",
+      "title": "VYRA Portal experience",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P21.01",
+        "P21.02",
+        "P21.03",
+        "P21.04",
+        "P21.05",
+        "P21.06",
+        "P21.07",
+        "P21.08",
+        "P21.09",
+        "P21.10",
+        "P21.11"
+      ],
+      "depends_on": [
+        "P14",
+        "P15",
+        "P20"
+      ],
+      "total_stories": 11,
+      "completed_stories": 0
+    },
+    "P22": {
+      "id": "P22",
+      "title": "VYRA Studio experience",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P22.01",
+        "P22.02",
+        "P22.03",
+        "P22.04",
+        "P22.05",
+        "P22.06",
+        "P22.07",
+        "P22.08",
+        "P22.09",
+        "P22.10",
+        "P22.11"
+      ],
+      "depends_on": [
+        "P13",
+        "P15",
+        "P20"
+      ],
+      "total_stories": 11,
+      "completed_stories": 0
+    },
+    "P23": {
+      "id": "P23",
+      "title": "VYRA Control experience",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P23.01",
+        "P23.02",
+        "P23.03",
+        "P23.04",
+        "P23.05",
+        "P23.06",
+        "P23.07",
+        "P23.08",
+        "P23.09"
+      ],
+      "depends_on": [
+        "P6",
+        "P10",
+        "P15",
+        "P20"
+      ],
+      "total_stories": 9,
+      "completed_stories": 0
+    },
+    "P24": {
+      "id": "P24",
+      "title": "Experience conformance: responsive, accessibility, motion and state",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P24.01",
+        "P24.02",
+        "P24.03",
+        "P24.04",
+        "P24.05",
+        "P24.06",
+        "P24.07"
+      ],
+      "depends_on": [
+        "P21",
+        "P22",
+        "P23"
+      ],
+      "total_stories": 7,
+      "completed_stories": 0
+    },
+    "P3": {
+      "id": "P3",
+      "title": "Identity and authorization",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P3.01",
+        "P3.02",
+        "P3.03",
+        "P3.04",
+        "P3.05",
+        "P3.06",
+        "P3.07",
+        "P3.08",
+        "P3.09",
+        "P3.10"
+      ],
+      "depends_on": [
+        "P2"
+      ],
+      "total_stories": 10,
+      "completed_stories": 0
+    },
+    "P4": {
+      "id": "P4",
+      "title": "Provider framework",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P4.01",
+        "P4.02",
+        "P4.03",
+        "P4.04",
+        "P4.05",
+        "P4.06",
+        "P4.07",
+        "P4.08",
+        "P4.09",
+        "P4.10",
+        "P4.11"
+      ],
+      "depends_on": [
+        "P1"
+      ],
+      "total_stories": 11,
+      "completed_stories": 0
+    },
+    "P5": {
+      "id": "P5",
+      "title": "Governance and identity assets",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P5.01",
+        "P5.02",
+        "P5.03",
+        "P5.04",
+        "P5.05",
+        "P5.06",
+        "P5.07",
+        "P5.08",
+        "P5.09"
+      ],
+      "depends_on": [
+        "P3",
+        "P4"
+      ],
+      "total_stories": 9,
+      "completed_stories": 0
+    },
+    "P6": {
+      "id": "P6",
+      "title": "Ledgers, plans and subscription",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P6.01",
+        "P6.02",
+        "P6.03",
+        "P6.04",
+        "P6.05",
+        "P6.06",
+        "P6.07",
+        "P6.08",
+        "P6.09"
+      ],
+      "depends_on": [
+        "P2"
+      ],
+      "total_stories": 9,
+      "completed_stories": 0
+    },
+    "P7": {
+      "id": "P7",
+      "title": "Async backbone",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P7.01",
+        "P7.02",
+        "P7.03",
+        "P7.04",
+        "P7.05",
+        "P7.06",
+        "P7.07",
+        "P7.08",
+        "P7.09",
+        "P7.10"
+      ],
+      "depends_on": [
+        "P2"
+      ],
+      "total_stories": 10,
+      "completed_stories": 0
+    },
+    "P8": {
+      "id": "P8",
+      "title": "Workflow engine",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P8.01",
+        "P8.02",
+        "P8.03",
+        "P8.04",
+        "P8.05",
+        "P8.06",
+        "P8.07",
+        "P8.08",
+        "P8.09",
+        "P8.10",
+        "P8.11",
+        "P8.12"
+      ],
+      "depends_on": [
+        "P5",
+        "P6",
+        "P7"
+      ],
+      "total_stories": 12,
+      "completed_stories": 0
+    },
+    "P9": {
+      "id": "P9",
+      "title": "Knowledge engine",
+      "status": "generated",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "merged_at": "2026-08-26T15:46:42.831Z",
+      "stories": [
+        "P9.01",
+        "P9.02",
+        "P9.03",
+        "P9.04",
+        "P9.05",
+        "P9.06",
+        "P9.07",
+        "P9.08",
+        "P9.09",
+        "P9.10"
+      ],
+      "depends_on": [
+        "P2",
+        "P4",
+        "P7"
+      ],
+      "total_stories": 10,
+      "completed_stories": 0
+    }
+  },
+  "last_updated": "2026-08-26T17:51:07.595298Z",
+  "stories": {
+    "P1.01": {
+      "id": "P1.01",
+      "epic_id": "P1",
+      "title": "Monorepo skeleton and workspace tooling",
+      "status": "done",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": [],
+      "completed_at": "2026-08-26T17:51:07.595298Z"
+    },
+    "P1.02": {
+      "id": "P1.02",
+      "epic_id": "P1",
+      "title": "Package scaffolding per architecture §2.2",
+      "status": "done",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P1.01"
+      ],
+      "files_to_modify": [],
+      "completed_at": "2026-08-26T17:51:07.595298Z"
+    },
+    "P1.03": {
+      "id": "P1.03",
+      "epic_id": "P1",
+      "title": "Boundary lint rules and FF-04 dependency-graph check",
+      "status": "done",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P1.02"
+      ],
+      "files_to_modify": [],
+      "completed_at": "2026-08-26T17:51:07.595298Z"
+    },
+    "P1.04": {
+      "id": "P1.04",
+      "epic_id": "P1",
+      "title": "packages/contracts foundation (Zod, DTOs, error codes)",
+      "status": "done",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P1.02"
+      ],
+      "files_to_modify": [],
+      "completed_at": "2026-08-26T17:51:07.595298Z"
+    },
+    "P1.05": {
+      "id": "P1.05",
+      "epic_id": "P1",
+      "title": "packages/config typed environment loading",
+      "status": "done",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P1.04"
+      ],
+      "files_to_modify": [],
+      "completed_at": "2026-08-26T17:51:07.595298Z"
+    },
+    "P1.06": {
+      "id": "P1.06",
+      "epic_id": "P1",
+      "title": "CI pipeline stages 1-5",
+      "status": "done",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P1.03"
+      ],
+      "files_to_modify": [],
+      "completed_at": "2026-08-26T17:51:07.595298Z"
+    },
+    "P1.07": {
+      "id": "P1.07",
+      "epic_id": "P1",
+      "title": "Secret scanning and FF-19",
+      "status": "done",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P1.06"
+      ],
+      "files_to_modify": [],
+      "completed_at": "2026-08-26T17:51:07.595298Z"
+    },
+    "P1.08": {
+      "id": "P1.08",
+      "epic_id": "P1",
+      "title": "`apps/api` NestJS bootstrap per ADR-0004",
+      "status": "done",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P1.05"
+      ],
+      "files_to_modify": [],
+      "completed_at": "2026-08-26T17:51:07.595298Z"
+    },
+    "P1.09": {
+      "id": "P1.09",
+      "epic_id": "P1",
+      "title": "Worker process bootstraps: `worker-ai`, `worker-media`, `worker-social`",
+      "status": "done",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P1.05"
+      ],
+      "files_to_modify": [],
+      "completed_at": "2026-08-26T17:51:07.595298Z"
+    },
+    "P1.10": {
+      "id": "P1.10",
+      "epic_id": "P1",
+      "title": "OpenAPI generation and the FF-18 generate-and-diff check",
+      "status": "done",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P1.08"
+      ],
+      "files_to_modify": [],
+      "completed_at": "2026-08-26T17:51:07.595298Z"
+    },
+    "P10.01": {
+      "id": "P10.01",
+      "epic_id": "P10",
+      "title": "Context builder with trust boundary",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P10.02": {
+      "id": "P10.02",
+      "epic_id": "P10",
+      "title": "Prompt template versioning",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P10.01"
+      ],
+      "files_to_modify": []
+    },
+    "P10.03": {
+      "id": "P10.03",
+      "epic_id": "P10",
+      "title": "Model router and policies",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P10.02",
+        "P4.03"
+      ],
+      "files_to_modify": []
+    },
+    "P10.04": {
+      "id": "P10.04",
+      "epic_id": "P10",
+      "title": "Output validator",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P10.03"
+      ],
+      "files_to_modify": []
+    },
+    "P10.05": {
+      "id": "P10.05",
+      "epic_id": "P10",
+      "title": "Task taxonomy implementations",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P10.04",
+        "P9.05"
+      ],
+      "files_to_modify": []
+    },
+    "P10.06": {
+      "id": "P10.06",
+      "epic_id": "P10",
+      "title": "Brand compliance task",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P10.05"
+      ],
+      "files_to_modify": []
+    },
+    "P10.07": {
+      "id": "P10.07",
+      "epic_id": "P10",
+      "title": "Token cost recording",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P10.03",
+        "P6.04"
+      ],
+      "files_to_modify": []
+    },
+    "P10.08": {
+      "id": "P10.08",
+      "epic_id": "P10",
+      "title": "FF-09 no model identifier outside configuration",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P10.03"
+      ],
+      "files_to_modify": []
+    },
+    "P10.09": {
+      "id": "P10.09",
+      "epic_id": "P10",
+      "title": "FF-27 prompt injection containment",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P10.01"
+      ],
+      "files_to_modify": []
+    },
+    "P11.01": {
+      "id": "P11.01",
+      "epic_id": "P11",
+      "title": "ElevenLabs synthesis adapter",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P11.02": {
+      "id": "P11.02",
+      "epic_id": "P11",
+      "title": "Audio ingestion to S3",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P11.01"
+      ],
+      "files_to_modify": []
+    },
+    "P11.03": {
+      "id": "P11.03",
+      "epic_id": "P11",
+      "title": "HeyGen upload-asset handoff",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P11.02",
+        "P4.04"
+      ],
+      "files_to_modify": []
+    },
+    "P11.04": {
+      "id": "P11.04",
+      "epic_id": "P11",
+      "title": "Idempotent render submission",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P11.03"
+      ],
+      "files_to_modify": []
+    },
+    "P11.05": {
+      "id": "P11.05",
+      "epic_id": "P11",
+      "title": "Polling and webhook reconciliation",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P11.04",
+        "P7.06"
+      ],
+      "files_to_modify": []
+    },
+    "P11.06": {
+      "id": "P11.06",
+      "epic_id": "P11",
+      "title": "INGESTING state with retry budget and reconciler",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P11.05"
+      ],
+      "files_to_modify": []
+    },
+    "P11.07": {
+      "id": "P11.07",
+      "epic_id": "P11",
+      "title": "Media assets and signed URL issuance",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P11.06"
+      ],
+      "files_to_modify": []
+    },
+    "P11.08": {
+      "id": "P11.08",
+      "epic_id": "P11",
+      "title": "Usage commit exactly once per completed attempt",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P11.06",
+        "P6.03"
+      ],
+      "files_to_modify": []
+    },
+    "P11.09": {
+      "id": "P11.09",
+      "epic_id": "P11",
+      "title": "FF-21 no media on the local filesystem",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P11.02"
+      ],
+      "files_to_modify": []
+    },
+    "P11.10": {
+      "id": "P11.10",
+      "epic_id": "P11",
+      "title": "FF-32 an ingestion failure never causes a billable re-render",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P11.06",
+        "P11.08"
+      ],
+      "files_to_modify": []
+    },
+    "P11.11": {
+      "id": "P11.11",
+      "epic_id": "P11",
+      "title": "End-to-end generation against mocks",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P11.07",
+        "P11.10"
+      ],
+      "files_to_modify": []
+    },
+    "P12.01": {
+      "id": "P12.01",
+      "epic_id": "P12",
+      "title": "QARecord with human verdict",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P12.02": {
+      "id": "P12.02",
+      "epic_id": "P12",
+      "title": "QA reviewer endpoints (T13, T14)",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P12.01"
+      ],
+      "files_to_modify": []
+    },
+    "P12.03": {
+      "id": "P12.03",
+      "epic_id": "P12",
+      "title": "Client approval endpoints (T05, T06, T15, T16)",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P12.01"
+      ],
+      "files_to_modify": []
+    },
+    "P12.04": {
+      "id": "P12.04",
+      "epic_id": "P12",
+      "title": "Tenant MANUAL/AUTO policy for client acceptance only",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P12.03"
+      ],
+      "files_to_modify": []
+    },
+    "P12.05": {
+      "id": "P12.05",
+      "epic_id": "P12",
+      "title": "FF-33 VYRA QA cannot be skipped",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P12.04"
+      ],
+      "files_to_modify": []
+    },
+    "P12.06": {
+      "id": "P12.06",
+      "epic_id": "P12",
+      "title": "Authorization and state machine coverage for approval transitions",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P12.05"
+      ],
+      "files_to_modify": []
+    },
+    "P13.01": {
+      "id": "P13.01",
+      "epic_id": "P13",
+      "title": "Campaign and editorial calendar read model",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P13.02": {
+      "id": "P13.02",
+      "epic_id": "P13",
+      "title": "Social connection OAuth flow with encrypted token storage",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P4.01"
+      ],
+      "files_to_modify": []
+    },
+    "P13.03": {
+      "id": "P13.03",
+      "epic_id": "P13",
+      "title": "Token refresh, revocation detection and connection health",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P13.02",
+        "P7.07"
+      ],
+      "files_to_modify": []
+    },
+    "P13.04": {
+      "id": "P13.04",
+      "epic_id": "P13",
+      "title": "Pre-flight connection validation and quota admission control",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P13.03"
+      ],
+      "files_to_modify": []
+    },
+    "P13.05": {
+      "id": "P13.05",
+      "epic_id": "P13",
+      "title": "Scheduling endpoint (T17) and schedule cancellation",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P13.04",
+        "P8.07"
+      ],
+      "files_to_modify": []
+    },
+    "P13.06": {
+      "id": "P13.06",
+      "epic_id": "P13",
+      "title": "Publication dispatcher (T18)",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P13.05",
+        "P7.03"
+      ],
+      "files_to_modify": []
+    },
+    "P13.07": {
+      "id": "P13.07",
+      "epic_id": "P13",
+      "title": "Meta publishing adapter for Instagram and Facebook",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P13.02",
+        "P4.05"
+      ],
+      "files_to_modify": []
+    },
+    "P13.08": {
+      "id": "P13.08",
+      "epic_id": "P13",
+      "title": "TikTok publishing adapter with the unaudited restriction",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P13.02",
+        "P4.05"
+      ],
+      "files_to_modify": []
+    },
+    "P13.09": {
+      "id": "P13.09",
+      "epic_id": "P13",
+      "title": "AI disclosure capability and blocked publication",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P13.07",
+        "P13.08"
+      ],
+      "files_to_modify": []
+    },
+    "P13.10": {
+      "id": "P13.10",
+      "epic_id": "P13",
+      "title": "Publication result handling (T19, T20) and failure classes",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P13.06",
+        "P13.09"
+      ],
+      "files_to_modify": []
+    },
+    "P13.11": {
+      "id": "P13.11",
+      "epic_id": "P13",
+      "title": "FF-10 social tokens encrypted at rest",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P13.02"
+      ],
+      "files_to_modify": []
+    },
+    "P13.12": {
+      "id": "P13.12",
+      "epic_id": "P13",
+      "title": "FF-29 publication is authorized and deduplicated",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P13.10"
+      ],
+      "files_to_modify": []
+    },
+    "P14.01": {
+      "id": "P14.01",
+      "epic_id": "P14",
+      "title": "performance_snapshot with normalized fields and raw payload",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P14.02": {
+      "id": "P14.02",
+      "epic_id": "P14",
+      "title": "Collection windows scheduled from publication",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P14.01",
+        "P13.10"
+      ],
+      "files_to_modify": []
+    },
+    "P14.03": {
+      "id": "P14.03",
+      "epic_id": "P14",
+      "title": "Idempotent collection per publication and bucket",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P14.02"
+      ],
+      "files_to_modify": []
+    },
+    "P14.04": {
+      "id": "P14.04",
+      "epic_id": "P14",
+      "title": "Metric fetch and per-platform normalization",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P14.03",
+        "P13.07",
+        "P13.08"
+      ],
+      "files_to_modify": []
+    },
+    "P14.05": {
+      "id": "P14.05",
+      "epic_id": "P14",
+      "title": "Partial data and collection-gap handling",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P14.04"
+      ],
+      "files_to_modify": []
+    },
+    "P14.06": {
+      "id": "P14.06",
+      "epic_id": "P14",
+      "title": "Performance read path from snapshots only",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P14.05"
+      ],
+      "files_to_modify": []
+    },
+    "P14.07": {
+      "id": "P14.07",
+      "epic_id": "P14",
+      "title": "FF-16 dashboards never call providers synchronously",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P14.06"
+      ],
+      "files_to_modify": []
+    },
+    "P14.08": {
+      "id": "P14.08",
+      "epic_id": "P14",
+      "title": "Contract, authorization and tenancy coverage for the read path",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P14.06"
+      ],
+      "files_to_modify": []
+    },
+    "P15.01": {
+      "id": "P15.01",
+      "epic_id": "P15",
+      "title": "Design-system integration and per-surface theming in `apps/web`",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P18.16"
+      ],
+      "files_to_modify": []
+    },
+    "P15.02": {
+      "id": "P15.02",
+      "epic_id": "P15",
+      "title": "Route groups and role-based surface routing in the `P20` shell",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.01",
+        "P20.02"
+      ],
+      "files_to_modify": []
+    },
+    "P15.03": {
+      "id": "P15.03",
+      "epic_id": "P15",
+      "title": "Authentication, MFA and session screens",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.02",
+        "P3.03"
+      ],
+      "files_to_modify": []
+    },
+    "P15.04": {
+      "id": "P15.04",
+      "epic_id": "P15",
+      "title": "Portal dashboard",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.03"
+      ],
+      "files_to_modify": []
+    },
+    "P15.05": {
+      "id": "P15.05",
+      "epic_id": "P15",
+      "title": "Portal content request submission",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.04",
+        "P8.01"
+      ],
+      "files_to_modify": []
+    },
+    "P15.06": {
+      "id": "P15.06",
+      "epic_id": "P15",
+      "title": "Portal script approval screen",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.04",
+        "P12.03"
+      ],
+      "files_to_modify": []
+    },
+    "P15.07": {
+      "id": "P15.07",
+      "epic_id": "P15",
+      "title": "Portal video approval screen",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.06",
+        "P12.03"
+      ],
+      "files_to_modify": []
+    },
+    "P15.08": {
+      "id": "P15.08",
+      "epic_id": "P15",
+      "title": "Portal content tracking and editorial calendar",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.04",
+        "P13"
+      ],
+      "files_to_modify": []
+    },
+    "P15.09": {
+      "id": "P15.09",
+      "epic_id": "P15",
+      "title": "Portal library and signed media delivery",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.04",
+        "P11.07"
+      ],
+      "files_to_modify": []
+    },
+    "P15.10": {
+      "id": "P15.10",
+      "epic_id": "P15",
+      "title": "Portal performance screen reading snapshots only",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.04",
+        "P14"
+      ],
+      "files_to_modify": []
+    },
+    "P15.11": {
+      "id": "P15.11",
+      "epic_id": "P15",
+      "title": "Portal plan, consumption, Twin status and consent capture",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.04",
+        "P5.01",
+        "P6.01"
+      ],
+      "files_to_modify": []
+    },
+    "P15.12": {
+      "id": "P15.12",
+      "epic_id": "P15",
+      "title": "Studio knowledge screen with retrieval-trace view",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.02",
+        "P9.08"
+      ],
+      "files_to_modify": []
+    },
+    "P15.13": {
+      "id": "P15.13",
+      "epic_id": "P15",
+      "title": "Studio generation, queue and identity-asset screens",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.02",
+        "P7.07",
+        "P11.06"
+      ],
+      "files_to_modify": []
+    },
+    "P15.14": {
+      "id": "P15.14",
+      "epic_id": "P15",
+      "title": "Studio QA screen",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.02",
+        "P12.02"
+      ],
+      "files_to_modify": []
+    },
+    "P15.15": {
+      "id": "P15.15",
+      "epic_id": "P15",
+      "title": "Studio client, request and script management screens",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.13"
+      ],
+      "files_to_modify": []
+    },
+    "P15.16": {
+      "id": "P15.16",
+      "epic_id": "P15",
+      "title": "Studio calendar, publishing and cross-tenant performance screens",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.13",
+        "P13",
+        "P14"
+      ],
+      "files_to_modify": []
+    },
+    "P15.17": {
+      "id": "P15.17",
+      "epic_id": "P15",
+      "title": "Control plans, subscription, usage and contribution screens",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.02",
+        "P6.05",
+        "P10.07"
+      ],
+      "files_to_modify": []
+    },
+    "P15.18": {
+      "id": "P15.18",
+      "epic_id": "P15",
+      "title": "Control provider health, balance and audit screens",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.02",
+        "P5.09"
+      ],
+      "files_to_modify": []
+    },
+    "P15.19": {
+      "id": "P15.19",
+      "epic_id": "P15",
+      "title": "Control tenants, users, roles, integrations and status screens",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.02",
+        "P3.06"
+      ],
+      "files_to_modify": []
+    },
+    "P15.20": {
+      "id": "P15.20",
+      "epic_id": "P15",
+      "title": "Screen-level rendering rules driven by the route manifest",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.02",
+        "P3.07"
+      ],
+      "files_to_modify": []
+    },
+    "P15.21": {
+      "id": "P15.21",
+      "epic_id": "P15",
+      "title": "Responsiveness and accessibility conformance for rendered routes",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.19"
+      ],
+      "files_to_modify": []
+    },
+    "P15.22": {
+      "id": "P15.22",
+      "epic_id": "P15",
+      "title": "FF-17 conformance for every rendered route",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P15.20",
+        "P15.21"
+      ],
+      "files_to_modify": []
+    },
+    "P16.01": {
+      "id": "P16.01",
+      "epic_id": "P16",
+      "title": "Metric emission across every observability domain",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P16.02": {
+      "id": "P16.02",
+      "epic_id": "P16",
+      "title": "Alarms for every condition in `observability.md` §4",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P16.01"
+      ],
+      "files_to_modify": []
+    },
+    "P16.03": {
+      "id": "P16.03",
+      "epic_id": "P16",
+      "title": "A runbook for every alarm, including DLQ redrive, ingestion recovery and production restore",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P16.02"
+      ],
+      "files_to_modify": []
+    },
+    "P16.04": {
+      "id": "P16.04",
+      "epic_id": "P16",
+      "title": "Retention jobs for every dataset and FF-31",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P16.05": {
+      "id": "P16.05",
+      "epic_id": "P16",
+      "title": "Provider balance sync loop and low-balance handling",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P16.01"
+      ],
+      "files_to_modify": []
+    },
+    "P16.06": {
+      "id": "P16.06",
+      "epic_id": "P16",
+      "title": "`NotificationProvider` with in-app delivery; `EmailProvider` deferred",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P16.07": {
+      "id": "P16.07",
+      "epic_id": "P16",
+      "title": "Structured logging, correlation propagation and the redaction layer",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P16.08": {
+      "id": "P16.08",
+      "epic_id": "P16",
+      "title": "Operational dashboards",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P16.01"
+      ],
+      "files_to_modify": []
+    },
+    "P16.09": {
+      "id": "P16.09",
+      "epic_id": "P16",
+      "title": "Load tests against NFR-01, NFR-02 and NFR-03",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P16.08"
+      ],
+      "files_to_modify": []
+    },
+    "P16.10": {
+      "id": "P16.10",
+      "epic_id": "P16",
+      "title": "Environment separation verification and the production gate register",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P16.03"
+      ],
+      "files_to_modify": []
+    },
+    "P17.01": {
+      "id": "P17.01",
+      "epic_id": "P17",
+      "title": "IaC tooling, remote state and the infrastructure CI lane",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P17.02": {
+      "id": "P17.02",
+      "epic_id": "P17",
+      "title": "Three separated environments and the NFR-12 separation check",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P17.01"
+      ],
+      "files_to_modify": []
+    },
+    "P17.03": {
+      "id": "P17.03",
+      "epic_id": "P17",
+      "title": "Route53, CloudFront and Origin Access Control",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P17.02"
+      ],
+      "files_to_modify": []
+    },
+    "P17.04": {
+      "id": "P17.04",
+      "epic_id": "P17",
+      "title": "S3 media and knowledge buckets, private with SSE-KMS and lifecycle",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P17.02"
+      ],
+      "files_to_modify": []
+    },
+    "P17.05": {
+      "id": "P17.05",
+      "epic_id": "P17",
+      "title": "RDS PostgreSQL with pgvector, least-privilege roles and PITR",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P17.02",
+        "P2.02"
+      ],
+      "files_to_modify": []
+    },
+    "P17.06": {
+      "id": "P17.06",
+      "epic_id": "P17",
+      "title": "SQS queues and dead-letter queues per `aws-topology.md` §6",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P17.02",
+        "P1.09"
+      ],
+      "files_to_modify": []
+    },
+    "P17.07": {
+      "id": "P17.07",
+      "epic_id": "P17",
+      "title": "Secrets Manager, KMS keys and the least-privilege instance profile",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P17.02"
+      ],
+      "files_to_modify": []
+    },
+    "P17.08": {
+      "id": "P17.08",
+      "epic_id": "P17",
+      "title": "EC2 compute host, container runtime, cutover and rollback",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P17.03",
+        "P17.05",
+        "P17.06",
+        "P17.07"
+      ],
+      "files_to_modify": []
+    },
+    "P17.09": {
+      "id": "P17.09",
+      "epic_id": "P17",
+      "title": "CI stages 6–7: build and container build to ECR tagged by commit SHA",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P17.01",
+        "P1.08",
+        "P1.09"
+      ],
+      "files_to_modify": []
+    },
+    "P17.10": {
+      "id": "P17.10",
+      "epic_id": "P17",
+      "title": "CI stage 8: migration validation with destructive-change detection",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P17.05",
+        "P2.03"
+      ],
+      "files_to_modify": []
+    },
+    "P17.11": {
+      "id": "P17.11",
+      "epic_id": "P17",
+      "title": "CI stages 9–10: environment-gated deploy, smoke and automatic rollback",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P17.08",
+        "P17.09",
+        "P17.10"
+      ],
+      "files_to_modify": []
+    },
+    "P17.12": {
+      "id": "P17.12",
+      "epic_id": "P17",
+      "title": "Log groups, metric namespace and alarm substrate",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P17.08"
+      ],
+      "files_to_modify": []
+    },
+    "P18.01": {
+      "id": "P18.01",
+      "epic_id": "P18",
+      "title": "Design token layer: primitives, semantics and the Tailwind bridge",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P18.02": {
+      "id": "P18.02",
+      "epic_id": "P18",
+      "title": "Theme system: carbon canonical, light remap, contrast conformance",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P18.01"
+      ],
+      "files_to_modify": []
+    },
+    "P18.03": {
+      "id": "P18.03",
+      "epic_id": "P18",
+      "title": "Typography system, self-hosted variable fonts and the string layer",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P18.01"
+      ],
+      "files_to_modify": []
+    },
+    "P18.04": {
+      "id": "P18.04",
+      "epic_id": "P18",
+      "title": "Spacing, grid, breakpoint and density system",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P18.01"
+      ],
+      "files_to_modify": []
+    },
+    "P18.05": {
+      "id": "P18.05",
+      "epic_id": "P18",
+      "title": "Radius, border and elevation primitives",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P18.01"
+      ],
+      "files_to_modify": []
+    },
+    "P18.06": {
+      "id": "P18.06",
+      "epic_id": "P18",
+      "title": "Motion system and the reduced-motion contract",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P18.01"
+      ],
+      "files_to_modify": []
+    },
+    "P18.07": {
+      "id": "P18.07",
+      "epic_id": "P18",
+      "title": "Iconography layer over Lucide with semantic wrappers",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P18.01"
+      ],
+      "files_to_modify": []
+    },
+    "P18.08": {
+      "id": "P18.08",
+      "epic_id": "P18",
+      "title": "Core control primitives",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P18.04",
+        "P18.05",
+        "P18.06"
+      ],
+      "files_to_modify": []
+    },
+    "P18.09": {
+      "id": "P18.09",
+      "epic_id": "P18",
+      "title": "Form system, validation and stable-code error mapping",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P18.08"
+      ],
+      "files_to_modify": []
+    },
+    "P18.10": {
+      "id": "P18.10",
+      "epic_id": "P18",
+      "title": "Surface primitives and the card-nesting rule",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P18.05"
+      ],
+      "files_to_modify": []
+    },
+    "P18.11": {
+      "id": "P18.11",
+      "epic_id": "P18",
+      "title": "Overlay primitives: dialog, drawer, sheet, popover, tooltip",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P18.08",
+        "P18.06"
+      ],
+      "files_to_modify": []
+    },
+    "P18.12": {
+      "id": "P18.12",
+      "epic_id": "P18",
+      "title": "Feedback primitives: toast, banners and live regions",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P18.11"
+      ],
+      "files_to_modify": []
+    },
+    "P18.13": {
+      "id": "P18.13",
+      "epic_id": "P18",
+      "title": "Status language components and the single string source",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P18.03",
+        "P18.07"
+      ],
+      "files_to_modify": []
+    },
+    "P18.14": {
+      "id": "P18.14",
+      "epic_id": "P18",
+      "title": "Loading, empty and error state primitives",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P18.10",
+        "P18.13"
+      ],
+      "files_to_modify": []
+    },
+    "P18.15": {
+      "id": "P18.15",
+      "epic_id": "P18",
+      "title": "Table primitive and cursor pagination controls",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P18.10",
+        "P18.14"
+      ],
+      "files_to_modify": []
+    },
+    "P18.16": {
+      "id": "P18.16",
+      "epic_id": "P18",
+      "title": "Design-system conformance harness",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P18.15",
+        "P18.12"
+      ],
+      "files_to_modify": []
+    },
+    "P19.01": {
+      "id": "P19.01",
+      "epic_id": "P19",
+      "title": "Chart primitives over shadcn Charts and Recharts",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P19.02": {
+      "id": "P19.02",
+      "epic_id": "P19",
+      "title": "Gap semantics, snapshot age and chart accessibility",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P19.01"
+      ],
+      "files_to_modify": []
+    },
+    "P19.03": {
+      "id": "P19.03",
+      "epic_id": "P19",
+      "title": "Data-grid primitives over TanStack Table",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P19.04": {
+      "id": "P19.04",
+      "epic_id": "P19",
+      "title": "Grid virtualisation, keyboard navigation and truncation",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P19.03"
+      ],
+      "files_to_modify": []
+    },
+    "P19.05": {
+      "id": "P19.05",
+      "epic_id": "P19",
+      "title": "Media player primitive with signed-URL lifecycle and AI disclosure",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P19.06": {
+      "id": "P19.06",
+      "epic_id": "P19",
+      "title": "Audio waveform player and upload primitives",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P19.05"
+      ],
+      "files_to_modify": []
+    },
+    "P19.07": {
+      "id": "P19.07",
+      "epic_id": "P19",
+      "title": "Script editor primitive over Tiptap with the VYRA document schema",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P19.08": {
+      "id": "P19.08",
+      "epic_id": "P19",
+      "title": "Drag-and-drop interaction primitives with keyboard equivalence",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P19.09": {
+      "id": "P19.09",
+      "epic_id": "P19",
+      "title": "Calendar primitives and timezone rendering",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P19.08"
+      ],
+      "files_to_modify": []
+    },
+    "P2.01": {
+      "id": "P2.01",
+      "epic_id": "P2",
+      "title": "packages/database with Drizzle and connection management",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P2.02": {
+      "id": "P2.02",
+      "epic_id": "P2",
+      "title": "Migration tooling, role split and destructive-change detector",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P2.01"
+      ],
+      "files_to_modify": []
+    },
+    "P2.03": {
+      "id": "P2.03",
+      "epic_id": "P2",
+      "title": "tenant and membership tables",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P2.02"
+      ],
+      "files_to_modify": []
+    },
+    "P2.04": {
+      "id": "P2.04",
+      "epic_id": "P2",
+      "title": "user and session tables",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P2.02"
+      ],
+      "files_to_modify": []
+    },
+    "P2.05": {
+      "id": "P2.05",
+      "epic_id": "P2",
+      "title": "RLS policies and the tenant GUC",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P2.03",
+        "P2.04"
+      ],
+      "files_to_modify": []
+    },
+    "P2.06": {
+      "id": "P2.06",
+      "epic_id": "P2",
+      "title": "TenantContext transaction primitive",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P2.05"
+      ],
+      "files_to_modify": []
+    },
+    "P2.07": {
+      "id": "P2.07",
+      "epic_id": "P2",
+      "title": "audit_record append-only",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P2.05"
+      ],
+      "files_to_modify": []
+    },
+    "P2.08": {
+      "id": "P2.08",
+      "epic_id": "P2",
+      "title": "FF-01 tenancy and RLS fitness function",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P2.05"
+      ],
+      "files_to_modify": []
+    },
+    "P2.09": {
+      "id": "P2.09",
+      "epic_id": "P2",
+      "title": "FF-22 no string-built SQL",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P2.01"
+      ],
+      "files_to_modify": []
+    },
+    "P2.10": {
+      "id": "P2.10",
+      "epic_id": "P2",
+      "title": "Tenancy isolation test harness (class 7)",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P2.06"
+      ],
+      "files_to_modify": []
+    },
+    "P2.11": {
+      "id": "P2.11",
+      "epic_id": "P2",
+      "title": "Migration test class 8",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P2.02"
+      ],
+      "files_to_modify": []
+    },
+    "P20.01": {
+      "id": "P20.01",
+      "epic_id": "P20",
+      "title": "Application shell: topbar, rail, content and drawer regions",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P20.02": {
+      "id": "P20.02",
+      "epic_id": "P20",
+      "title": "Navigation model driven by the route manifest",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P20.01",
+        "P3.07"
+      ],
+      "files_to_modify": []
+    },
+    "P20.03": {
+      "id": "P20.03",
+      "epic_id": "P20",
+      "title": "Command palette with an authorized action corpus",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P20.02"
+      ],
+      "files_to_modify": []
+    },
+    "P20.04": {
+      "id": "P20.04",
+      "epic_id": "P20",
+      "title": "In-app notification centre",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P20.01"
+      ],
+      "files_to_modify": []
+    },
+    "P20.05": {
+      "id": "P20.05",
+      "epic_id": "P20",
+      "title": "Account menu, session state and session-expiry experience",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P20.01",
+        "P3.02"
+      ],
+      "files_to_modify": []
+    },
+    "P20.06": {
+      "id": "P20.06",
+      "epic_id": "P20",
+      "title": "Responsive shell across the breakpoint matrix",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P20.02"
+      ],
+      "files_to_modify": []
+    },
+    "P20.07": {
+      "id": "P20.07",
+      "epic_id": "P20",
+      "title": "Global condition banners",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P20.01"
+      ],
+      "files_to_modify": []
+    },
+    "P20.08": {
+      "id": "P20.08",
+      "epic_id": "P20",
+      "title": "Global error, not-found and offline surfaces",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P20.01"
+      ],
+      "files_to_modify": []
+    },
+    "P21.01": {
+      "id": "P21.01",
+      "epic_id": "P21",
+      "title": "Portal chrome, density and information architecture",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P21.02": {
+      "id": "P21.02",
+      "epic_id": "P21",
+      "title": "Onboarding activation checklist experience",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P21.01"
+      ],
+      "files_to_modify": []
+    },
+    "P21.03": {
+      "id": "P21.03",
+      "epic_id": "P21",
+      "title": "Portal dashboard: action rail, metrics, pipeline and consumption",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P21.01"
+      ],
+      "files_to_modify": []
+    },
+    "P21.04": {
+      "id": "P21.04",
+      "epic_id": "P21",
+      "title": "Content request composer experience",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P21.03"
+      ],
+      "files_to_modify": []
+    },
+    "P21.05": {
+      "id": "P21.05",
+      "epic_id": "P21",
+      "title": "Portal pipeline board and content tracking interactions",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P21.03"
+      ],
+      "files_to_modify": []
+    },
+    "P21.06": {
+      "id": "P21.06",
+      "epic_id": "P21",
+      "title": "Portal media, library and video presentation",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P21.01"
+      ],
+      "files_to_modify": []
+    },
+    "P21.07": {
+      "id": "P21.07",
+      "epic_id": "P21",
+      "title": "Portal editorial calendar and scheduling interactions",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P21.05"
+      ],
+      "files_to_modify": []
+    },
+    "P21.08": {
+      "id": "P21.08",
+      "epic_id": "P21",
+      "title": "Portal performance dashboards from snapshots only",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P21.03"
+      ],
+      "files_to_modify": []
+    },
+    "P21.09": {
+      "id": "P21.09",
+      "epic_id": "P21",
+      "title": "Approval experience: script and video decision surfaces",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P21.06"
+      ],
+      "files_to_modify": []
+    },
+    "P21.10": {
+      "id": "P21.10",
+      "epic_id": "P21",
+      "title": "Plan, consumption, Digital Twin state and consent experience",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P21.02"
+      ],
+      "files_to_modify": []
+    },
+    "P21.11": {
+      "id": "P21.11",
+      "epic_id": "P21",
+      "title": "Portal loading, empty, error and denied state coverage",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P21.04",
+        "P21.07",
+        "P21.08",
+        "P21.09",
+        "P21.10"
+      ],
+      "files_to_modify": []
+    },
+    "P22.01": {
+      "id": "P22.01",
+      "epic_id": "P22",
+      "title": "Studio chrome, client scope and dense density",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P22.02": {
+      "id": "P22.02",
+      "epic_id": "P22",
+      "title": "Script workspace over the editor primitive",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P22.01"
+      ],
+      "files_to_modify": []
+    },
+    "P22.03": {
+      "id": "P22.03",
+      "epic_id": "P22",
+      "title": "Version rail, diff and revision-budget experience",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P22.02"
+      ],
+      "files_to_modify": []
+    },
+    "P22.04": {
+      "id": "P22.04",
+      "epic_id": "P22",
+      "title": "Knowledge workspace and retrieval-trace experience",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P22.01"
+      ],
+      "files_to_modify": []
+    },
+    "P22.05": {
+      "id": "P22.05",
+      "epic_id": "P22",
+      "title": "Generation queue console",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P22.01"
+      ],
+      "files_to_modify": []
+    },
+    "P22.06": {
+      "id": "P22.06",
+      "epic_id": "P22",
+      "title": "QA workspace with annotation and explicit human verdict",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P22.05"
+      ],
+      "files_to_modify": []
+    },
+    "P22.07": {
+      "id": "P22.07",
+      "epic_id": "P22",
+      "title": "Publishing board and connection health",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P22.05"
+      ],
+      "files_to_modify": []
+    },
+    "P22.08": {
+      "id": "P22.08",
+      "epic_id": "P22",
+      "title": "Cross-client editorial calendar interactions",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P22.07"
+      ],
+      "files_to_modify": []
+    },
+    "P22.09": {
+      "id": "P22.09",
+      "epic_id": "P22",
+      "title": "Clients, requests and identity-asset experience",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P22.01"
+      ],
+      "files_to_modify": []
+    },
+    "P22.10": {
+      "id": "P22.10",
+      "epic_id": "P22",
+      "title": "Cross-tenant performance experience",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P22.01"
+      ],
+      "files_to_modify": []
+    },
+    "P22.11": {
+      "id": "P22.11",
+      "epic_id": "P22",
+      "title": "Studio state coverage and the sub-`md` designed refusal",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P22.03",
+        "P22.04",
+        "P22.06",
+        "P22.08",
+        "P22.09",
+        "P22.10"
+      ],
+      "files_to_modify": []
+    },
+    "P23.01": {
+      "id": "P23.01",
+      "epic_id": "P23",
+      "title": "Control chrome, density and MFA re-assertion experience",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P23.02": {
+      "id": "P23.02",
+      "epic_id": "P23",
+      "title": "Control status board: alarms, provider health, pressure and gate register",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P23.01"
+      ],
+      "files_to_modify": []
+    },
+    "P23.03": {
+      "id": "P23.03",
+      "epic_id": "P23",
+      "title": "Tenancy administration experience",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P23.01"
+      ],
+      "files_to_modify": []
+    },
+    "P23.04": {
+      "id": "P23.04",
+      "epic_id": "P23",
+      "title": "Users, roles and session administration experience",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P23.01"
+      ],
+      "files_to_modify": []
+    },
+    "P23.05": {
+      "id": "P23.05",
+      "epic_id": "P23",
+      "title": "Plans and entitlements with change-impact preview",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P23.03"
+      ],
+      "files_to_modify": []
+    },
+    "P23.06": {
+      "id": "P23.06",
+      "epic_id": "P23",
+      "title": "Usage ledger experience with the reservation chain",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P23.05"
+      ],
+      "files_to_modify": []
+    },
+    "P23.07": {
+      "id": "P23.07",
+      "epic_id": "P23",
+      "title": "Cost and contribution with estimated-value distinction",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P23.06"
+      ],
+      "files_to_modify": []
+    },
+    "P23.08": {
+      "id": "P23.08",
+      "epic_id": "P23",
+      "title": "Provider health, balance and integration experience",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P23.02"
+      ],
+      "files_to_modify": []
+    },
+    "P23.09": {
+      "id": "P23.09",
+      "epic_id": "P23",
+      "title": "Audit explorer, security surface and Control state coverage",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P23.04",
+        "P23.07",
+        "P23.08"
+      ],
+      "files_to_modify": []
+    },
+    "P24.01": {
+      "id": "P24.01",
+      "epic_id": "P24",
+      "title": "Responsive conformance across the per-surface commitment matrix",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P24.02": {
+      "id": "P24.02",
+      "epic_id": "P24",
+      "title": "Keyboard operability and focus-return conformance",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P24.03": {
+      "id": "P24.03",
+      "epic_id": "P24",
+      "title": "Screen-reader semantics and axe conformance",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P24.02"
+      ],
+      "files_to_modify": []
+    },
+    "P24.04": {
+      "id": "P24.04",
+      "epic_id": "P24",
+      "title": "Contrast and theme conformance for composed screens",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P24.05": {
+      "id": "P24.05",
+      "epic_id": "P24",
+      "title": "Reduced-motion and motion-budget conformance",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P24.06": {
+      "id": "P24.06",
+      "epic_id": "P24",
+      "title": "Screen performance budgets against NFR-03",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P24.01"
+      ],
+      "files_to_modify": []
+    },
+    "P24.07": {
+      "id": "P24.07",
+      "epic_id": "P24",
+      "title": "Blueprint conformance audit across all screens",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P24.01",
+        "P24.02",
+        "P24.03",
+        "P24.04",
+        "P24.05",
+        "P24.06"
+      ],
+      "files_to_modify": []
+    },
+    "P3.01": {
+      "id": "P3.01",
+      "epic_id": "P3",
+      "title": "Argon2id credential storage and password policy",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P3.02": {
+      "id": "P3.02",
+      "epic_id": "P3",
+      "title": "Opaque server-side sessions with revocation",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P3.01"
+      ],
+      "files_to_modify": []
+    },
+    "P3.03": {
+      "id": "P3.03",
+      "epic_id": "P3",
+      "title": "TOTP MFA enrolment and challenge",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P3.02"
+      ],
+      "files_to_modify": []
+    },
+    "P3.04": {
+      "id": "P3.04",
+      "epic_id": "P3",
+      "title": "Brute-force lockout and rate limiting",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P3.02"
+      ],
+      "files_to_modify": []
+    },
+    "P3.05": {
+      "id": "P3.05",
+      "epic_id": "P3",
+      "title": "CSRF protection",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P3.02"
+      ],
+      "files_to_modify": []
+    },
+    "P3.06": {
+      "id": "P3.06",
+      "epic_id": "P3",
+      "title": "RBAC guards and the role model",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P3.02"
+      ],
+      "files_to_modify": []
+    },
+    "P3.07": {
+      "id": "P3.07",
+      "epic_id": "P3",
+      "title": "Route manifest and FF-17",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P3.06"
+      ],
+      "files_to_modify": []
+    },
+    "P3.08": {
+      "id": "P3.08",
+      "epic_id": "P3",
+      "title": "Audit writes on sensitive actions",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P3.06",
+        "P2.07"
+      ],
+      "files_to_modify": []
+    },
+    "P3.09": {
+      "id": "P3.09",
+      "epic_id": "P3",
+      "title": "Authorization matrix tests (class 6)",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P3.07"
+      ],
+      "files_to_modify": []
+    },
+    "P3.10": {
+      "id": "P3.10",
+      "epic_id": "P3",
+      "title": "FF-23 authentication hardening check",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P3.04",
+        "P3.05"
+      ],
+      "files_to_modify": []
+    },
+    "P4.01": {
+      "id": "P4.01",
+      "epic_id": "P4",
+      "title": "Provider port definitions",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P4.02": {
+      "id": "P4.02",
+      "epic_id": "P4",
+      "title": "Provider error taxonomy",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P4.01"
+      ],
+      "files_to_modify": []
+    },
+    "P4.03": {
+      "id": "P4.03",
+      "epic_id": "P4",
+      "title": "Retry, backoff and circuit breaker",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P4.02"
+      ],
+      "files_to_modify": []
+    },
+    "P4.04": {
+      "id": "P4.04",
+      "epic_id": "P4",
+      "title": "Capability registry",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P4.01"
+      ],
+      "files_to_modify": []
+    },
+    "P4.05": {
+      "id": "P4.05",
+      "epic_id": "P4",
+      "title": "Mock adapters with success and failure fixtures",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P4.03",
+        "P4.04"
+      ],
+      "files_to_modify": []
+    },
+    "P4.06": {
+      "id": "P4.06",
+      "epic_id": "P4",
+      "title": "PROVIDER_MODE switching",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P4.05"
+      ],
+      "files_to_modify": []
+    },
+    "P4.07": {
+      "id": "P4.07",
+      "epic_id": "P4",
+      "title": "FF-02 and FF-03 provider isolation checks",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P4.01"
+      ],
+      "files_to_modify": []
+    },
+    "P4.08": {
+      "id": "P4.08",
+      "epic_id": "P4",
+      "title": "FF-13 provider limits as configuration",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P4.03"
+      ],
+      "files_to_modify": []
+    },
+    "P4.09": {
+      "id": "P4.09",
+      "epic_id": "P4",
+      "title": "FF-08 no billable provider call in CI",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P4.06"
+      ],
+      "files_to_modify": []
+    },
+    "P4.10": {
+      "id": "P4.10",
+      "epic_id": "P4",
+      "title": "Adapter test harness (class 4)",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P4.05"
+      ],
+      "files_to_modify": []
+    },
+    "P4.11": {
+      "id": "P4.11",
+      "epic_id": "P4",
+      "title": "Runtime credential resolver and FF-14 (Secrets Manager)",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P4.06"
+      ],
+      "files_to_modify": []
+    },
+    "P5.01": {
+      "id": "P5.01",
+      "epic_id": "P5",
+      "title": "Consent aggregate with versioning and scope",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P5.02": {
+      "id": "P5.02",
+      "epic_id": "P5",
+      "title": "Identity owner distinct from portal user",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P5.01"
+      ],
+      "files_to_modify": []
+    },
+    "P5.03": {
+      "id": "P5.03",
+      "epic_id": "P5",
+      "title": "Digital identity composition with element versioning",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P5.02"
+      ],
+      "files_to_modify": []
+    },
+    "P5.04": {
+      "id": "P5.04",
+      "epic_id": "P5",
+      "title": "Digital Twin lifecycle",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P5.03",
+        "P4.04"
+      ],
+      "files_to_modify": []
+    },
+    "P5.05": {
+      "id": "P5.05",
+      "epic_id": "P5",
+      "title": "Voice Clone lifecycle and verification state",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P5.03",
+        "P4.05"
+      ],
+      "files_to_modify": []
+    },
+    "P5.06": {
+      "id": "P5.06",
+      "epic_id": "P5",
+      "title": "Revocation with propagation tracking",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P5.04",
+        "P5.05"
+      ],
+      "files_to_modify": []
+    },
+    "P5.07": {
+      "id": "P5.07",
+      "epic_id": "P5",
+      "title": "FF-30 consent enforced before every generation",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P5.06"
+      ],
+      "files_to_modify": []
+    },
+    "P5.08": {
+      "id": "P5.08",
+      "epic_id": "P5",
+      "title": "FF-12 no bypass of provider voice verification",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P5.05"
+      ],
+      "files_to_modify": []
+    },
+    "P5.09": {
+      "id": "P5.09",
+      "epic_id": "P5",
+      "title": "Governance audit records",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P5.06",
+        "P3.08"
+      ],
+      "files_to_modify": []
+    },
+    "P6.01": {
+      "id": "P6.01",
+      "epic_id": "P6",
+      "title": "usage_ledger_entry append-only schema",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P6.02": {
+      "id": "P6.02",
+      "epic_id": "P6",
+      "title": "usage_reservation with unique indexes",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P6.01"
+      ],
+      "files_to_modify": []
+    },
+    "P6.03": {
+      "id": "P6.03",
+      "epic_id": "P6",
+      "title": "Reserve, commit, release and adjustment operations",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P6.02"
+      ],
+      "files_to_modify": []
+    },
+    "P6.04": {
+      "id": "P6.04",
+      "epic_id": "P6",
+      "title": "provider_cost_entry ledger",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P6.01"
+      ],
+      "files_to_modify": []
+    },
+    "P6.05": {
+      "id": "P6.05",
+      "epic_id": "P6",
+      "title": "Plan catalogue and entitlement derivation",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P6.01"
+      ],
+      "files_to_modify": []
+    },
+    "P6.06": {
+      "id": "P6.06",
+      "epic_id": "P6",
+      "title": "Subscription, billing cycle and manual payment status",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P6.05"
+      ],
+      "files_to_modify": []
+    },
+    "P6.07": {
+      "id": "P6.07",
+      "epic_id": "P6",
+      "title": "PaymentProvider extension point without implementation",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P6.06"
+      ],
+      "files_to_modify": []
+    },
+    "P6.08": {
+      "id": "P6.08",
+      "epic_id": "P6",
+      "title": "FF-07 consumption derived from the ledger",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P6.03",
+        "P6.05"
+      ],
+      "files_to_modify": []
+    },
+    "P6.09": {
+      "id": "P6.09",
+      "epic_id": "P6",
+      "title": "Consumption-correctness test suite",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P6.03",
+        "P6.04"
+      ],
+      "files_to_modify": []
+    },
+    "P7.01": {
+      "id": "P7.01",
+      "epic_id": "P7",
+      "title": "Transactional outbox table",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P7.02": {
+      "id": "P7.02",
+      "epic_id": "P7",
+      "title": "Outbox relay",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P7.01"
+      ],
+      "files_to_modify": []
+    },
+    "P7.03": {
+      "id": "P7.03",
+      "epic_id": "P7",
+      "title": "SQS queues and dead-letter queues",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P7.02"
+      ],
+      "files_to_modify": []
+    },
+    "P7.04": {
+      "id": "P7.04",
+      "epic_id": "P7",
+      "title": "Worker harness with tenant context",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P7.03",
+        "P2.06"
+      ],
+      "files_to_modify": []
+    },
+    "P7.05": {
+      "id": "P7.05",
+      "epic_id": "P7",
+      "title": "Idempotency table and key strategy",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P7.04"
+      ],
+      "files_to_modify": []
+    },
+    "P7.06": {
+      "id": "P7.06",
+      "epic_id": "P7",
+      "title": "Webhook intake with signature verification",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P7.05"
+      ],
+      "files_to_modify": []
+    },
+    "P7.07": {
+      "id": "P7.07",
+      "epic_id": "P7",
+      "title": "Reconciliation loops",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P7.06"
+      ],
+      "files_to_modify": []
+    },
+    "P7.08": {
+      "id": "P7.08",
+      "epic_id": "P7",
+      "title": "FF-24 webhook idempotent and signature-gated",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P7.06"
+      ],
+      "files_to_modify": []
+    },
+    "P7.09": {
+      "id": "P7.09",
+      "epic_id": "P7",
+      "title": "FF-28 generation idempotency check",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P7.05"
+      ],
+      "files_to_modify": []
+    },
+    "P7.10": {
+      "id": "P7.10",
+      "epic_id": "P7",
+      "title": "Queue, idempotency and webhook replay suites",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P7.03",
+        "P7.05",
+        "P7.06"
+      ],
+      "files_to_modify": []
+    },
+    "P8.01": {
+      "id": "P8.01",
+      "epic_id": "P8",
+      "title": "ContentRequest aggregate",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P8.02": {
+      "id": "P8.02",
+      "epic_id": "P8",
+      "title": "ContentItem aggregate and state vocabulary",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P8.01"
+      ],
+      "files_to_modify": []
+    },
+    "P8.03": {
+      "id": "P8.03",
+      "epic_id": "P8",
+      "title": "Transition engine core",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P8.02",
+        "P7.05"
+      ],
+      "files_to_modify": []
+    },
+    "P8.04": {
+      "id": "P8.04",
+      "epic_id": "P8",
+      "title": "Transitions T01-T07: request to script review",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P8.03"
+      ],
+      "files_to_modify": []
+    },
+    "P8.05": {
+      "id": "P8.05",
+      "epic_id": "P8",
+      "title": "Transitions T08-T12 and T11a/T11b/T11c",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P8.04",
+        "P6.03"
+      ],
+      "files_to_modify": []
+    },
+    "P8.06": {
+      "id": "P8.06",
+      "epic_id": "P8",
+      "title": "Transitions T13-T16: QA and approval",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P8.05"
+      ],
+      "files_to_modify": []
+    },
+    "P8.07": {
+      "id": "P8.07",
+      "epic_id": "P8",
+      "title": "Transitions T17-T23: scheduling, publication and terminal states",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P8.06"
+      ],
+      "files_to_modify": []
+    },
+    "P8.08": {
+      "id": "P8.08",
+      "epic_id": "P8",
+      "title": "Guards G-1 to G-4",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P8.05"
+      ],
+      "files_to_modify": []
+    },
+    "P8.09": {
+      "id": "P8.09",
+      "epic_id": "P8",
+      "title": "Per-tenant approval policies",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P8.06"
+      ],
+      "files_to_modify": []
+    },
+    "P8.10": {
+      "id": "P8.10",
+      "epic_id": "P8",
+      "title": "Domain event emission",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P8.03",
+        "P7.01"
+      ],
+      "files_to_modify": []
+    },
+    "P8.11": {
+      "id": "P8.11",
+      "epic_id": "P8",
+      "title": "FF-06 content state changes only via the engine",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P8.03"
+      ],
+      "files_to_modify": []
+    },
+    "P8.12": {
+      "id": "P8.12",
+      "epic_id": "P8",
+      "title": "State machine test suite (class 5)",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P8.07",
+        "P8.08",
+        "P8.09"
+      ],
+      "files_to_modify": []
+    },
+    "P9.01": {
+      "id": "P9.01",
+      "epic_id": "P9",
+      "title": "Knowledge source upload and storage",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [],
+      "files_to_modify": []
+    },
+    "P9.02": {
+      "id": "P9.02",
+      "epic_id": "P9",
+      "title": "Parsing pipeline",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P9.01"
+      ],
+      "files_to_modify": []
+    },
+    "P9.03": {
+      "id": "P9.03",
+      "epic_id": "P9",
+      "title": "Chunking, versioning, provenance and deduplication",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P9.02"
+      ],
+      "files_to_modify": []
+    },
+    "P9.04": {
+      "id": "P9.04",
+      "epic_id": "P9",
+      "title": "Embedding generation",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P9.03",
+        "P4.01"
+      ],
+      "files_to_modify": []
+    },
+    "P9.05": {
+      "id": "P9.05",
+      "epic_id": "P9",
+      "title": "pgvector retrieval filtered in SQL",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P9.04"
+      ],
+      "files_to_modify": []
+    },
+    "P9.06": {
+      "id": "P9.06",
+      "epic_id": "P9",
+      "title": "SSRF controls and egress allowlist",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P9.01"
+      ],
+      "files_to_modify": []
+    },
+    "P9.07": {
+      "id": "P9.07",
+      "epic_id": "P9",
+      "title": "Upload validation controls",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P9.01"
+      ],
+      "files_to_modify": []
+    },
+    "P9.08": {
+      "id": "P9.08",
+      "epic_id": "P9",
+      "title": "Retrieval traces",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P9.05"
+      ],
+      "files_to_modify": []
+    },
+    "P9.09": {
+      "id": "P9.09",
+      "epic_id": "P9",
+      "title": "Source lifecycle and failure semantics",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P9.03"
+      ],
+      "files_to_modify": []
+    },
+    "P9.10": {
+      "id": "P9.10",
+      "epic_id": "P9",
+      "title": "FF-05, FF-25 and FF-26 checks",
+      "status": "draft",
+      "source": "discovered",
+      "discovered_at": "2026-08-26T15:46:42.831Z",
+      "depends_on": [
+        "P9.05",
+        "P9.06",
+        "P9.07"
+      ],
+      "files_to_modify": []
+    }
+  },
+  "state_migration_repairs": [
+    {
+      "schemaVersion": 1,
+      "action": "client_auto_repair",
+      "reasonCodes": [
+        "initialized_stories_object"
+      ],
+      "repairedAt": "2026-08-26T13:37:43.484Z"
+    }
+  ],
+  "state_repair_debt": [
+    {
+      "id": "state-drift-repair:initialized_stories_object",
+      "status": "open",
+      "reason": "state_json_drift_repaired",
+      "reason_codes": [
+        "initialized_stories_object"
+      ],
+      "category": "state/drift-repair",
+      "created_at": "2026-08-26T13:37:43.484Z",
+      "last_seen_at": "2026-08-26T13:37:43.484Z",
+      "occurrences": 1
+    }
+  ]
+}

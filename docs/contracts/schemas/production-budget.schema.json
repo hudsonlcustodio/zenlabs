@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zenlabs.local/schemas/production-budget.schema.json",
+  "title": "ProductionBudget",
+  "type": "object",
+  "required": [
+    "id",
+    "tenantId",
+    "productionId",
+    "estimatedMin",
+    "estimatedMax",
+    "approvedBudget",
+    "consumed",
+    "retryBudget",
+    "premiumBudget",
+    "hardLimit",
+    "rateCardVersion"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "tenantId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "productionId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "estimatedMin": {
+      "type": "object",
+      "required": [
+        "currency",
+        "amount"
+      ],
+      "properties": {
+        "currency": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "estimatedMax": {
+      "type": "object",
+      "required": [
+        "currency",
+        "amount"
+      ],
+      "properties": {
+        "currency": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "approvedBudget": {
+      "type": "object",
+      "required": [
+        "currency",
+        "amount"
+      ],
+      "properties": {
+        "currency": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "consumed": {
+      "type": "object",
+      "required": [
+        "currency",
+        "amount"
+      ],
+      "properties": {
+        "currency": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "retryBudget": {
+      "type": "object",
+      "required": [
+        "currency",
+        "amount"
+      ],
+      "properties": {
+        "currency": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "premiumBudget": {
+      "type": "object",
+      "required": [
+        "currency",
+        "amount"
+      ],
+      "properties": {
+        "currency": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "hardLimit": {
+      "type": "object",
+      "required": [
+        "currency",
+        "amount"
+      ],
+      "properties": {
+        "currency": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "rateCardVersion": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "DRAFT",
+        "APPROVED",
+        "HOLD",
+        "EXHAUSTED",
+        "CLOSED"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

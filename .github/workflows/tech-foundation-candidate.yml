@@ -1,0 +1,87 @@
+name: Technical Foundation Candidate
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tech-foundation-candidate
+  cancel-in-progress: false
+
+jobs:
+  validate-candidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node 24.20.0
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.20.0
+
+      - name: Enable pnpm 11.25.0
+        shell: bash
+        run: |
+          corepack enable
+          corepack prepare pnpm@11.25.0 --activate
+          node --version
+          pnpm --version
+
+      - name: Validate static foundation
+        run: |
+          node scripts/foundation/validate.mjs
+          node scripts/uiux/validar.mjs
+          node scripts/tech/validate-foundation-decision.mjs
+
+      - name: Apply candidate baseline
+        run: node scripts/tech/apply-candidate-baseline.mjs
+
+      - name: Install and regenerate lockfile
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Tests
+        run: pnpm test
+
+      - name: Build
+        run: pnpm build
+
+      - name: Architecture fitness
+        run: pnpm fitness
+
+      - name: Dependency audit
+        run: pnpm audit --audit-level high
+
+      - name: Candidate baseline check
+        run: node scripts/tech/check-candidate-baseline.mjs
+
+      - name: Generate candidate patch
+        if: always()
+        shell: bash
+        run: |
+          git diff -- .nvmrc package.json apps/web/package.json pnpm-lock.yaml > tech-foundation-candidate.patch || true
+          cp package.json tech-package.json
+          cp apps/web/package.json tech-web-package.json
+          cp pnpm-lock.yaml tech-pnpm-lock.yaml || true
+
+      - name: Upload candidate artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: zenlabs-tech-foundation-candidate
+          if-no-files-found: error
+          path: |
+            tech-foundation-candidate.patch
+            tech-package.json
+            tech-web-package.json
+            tech-pnpm-lock.yaml

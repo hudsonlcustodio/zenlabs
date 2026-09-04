@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+#
+# FF-19 pre-commit hook — ADR-0022: "Secret scanning runs in CI and pre-commit."
+#
+# Blocks the commit when a staged file contains a credential. Catching it here
+# matters more than catching it in CI: once a secret is pushed it is
+# unrecoverable and must be rotated, not merely reverted.
+#
+# Installed by the repository `prepare` script (core.hooksPath=.githooks).
+# Bypass with `git commit --no-verify` only when you are certain, and expect
+# the CI security/static stage to block anyway.
+
+set -e
+
+echo "FF-19: scanning staged changes for secrets..."
+
+if ! node scripts/fitness/ff-19-no-committed-secret.mjs --staged; then
+  echo ""
+  echo "commit blocked by FF-19."
+  echo "If this is a false positive, mark the line with 'ff19:allow' and justify it in review."
+  exit 1
+fi

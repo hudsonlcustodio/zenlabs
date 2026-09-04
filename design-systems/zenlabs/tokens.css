@@ -1,0 +1,45 @@
+:root {
+  --zenlabs-fundo: #F5F6F3;
+  --zenlabs-superficie: #FFFFFF;
+  --zenlabs-superficie-suave: #EEEFEA;
+  --zenlabs-texto: #0A0A0C;
+  --zenlabs-texto-secundario: #5E6068;
+  --zenlabs-texto-terciario: #7E8089;
+  --zenlabs-borda: #DEDFDA;
+  --zenlabs-primaria: #C6FF3D;
+  --zenlabs-inteligencia: #7C5CFF;
+  --zenlabs-sucesso: #1DBA83;
+  --zenlabs-atencao: #D88A13;
+  --zenlabs-perigo: #E8475D;
+  --zenlabs-informacao: #347EDB;
+
+  --zenlabs-fonte-titulo: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --zenlabs-fonte-corpo: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --zenlabs-titulo-pagina: 28px;
+  --zenlabs-titulo-bloco: 17px;
+  --zenlabs-titulo-card: 14px;
+  --zenlabs-metrica: 32px;
+  --zenlabs-corpo: 14px;
+  --zenlabs-controle: 13px;
+  --zenlabs-apoio: 13px;
+  --zenlabs-metadado: 12px;
+  --zenlabs-rotulo-tecnico: 11px;
+
+  --zenlabs-sidebar: 236px;
+  --zenlabs-sidebar-recolhida: 68px;
+  --zenlabs-topo: 64px;
+  --zenlabs-controle-altura: 40px;
+  --zenlabs-linha-tabela: 46px;
+
+  --zenlabs-raio-controle: 10px;
+  --zenlabs-raio-card: 14px;
+
+  --zenlabs-espaco-1: 4px;
+  --zenlabs-espaco-2: 8px;
+  --zenlabs-espaco-3: 12px;
+  --zenlabs-espaco-4: 16px;
+  --zenlabs-espaco-5: 20px;
+  --zenlabs-espaco-6: 24px;
+  --zenlabs-espaco-8: 32px;
+}

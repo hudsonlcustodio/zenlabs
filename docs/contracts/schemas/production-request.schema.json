@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zenlabs.local/schemas/production-request.schema.json",
+  "title": "ProductionRequest",
+  "type": "object",
+  "required": [
+    "id",
+    "tenantId",
+    "clientId",
+    "digitalTwinId",
+    "objective",
+    "qualityPreference",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "tenantId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "clientId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "digitalTwinId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "objective": {
+      "type": "string",
+      "enum": [
+        "AUTHORITY",
+        "TRAINING",
+        "COURSE",
+        "MASTERCLASS",
+        "WORKSHOP",
+        "TALK",
+        "VIDEO_SDR",
+        "VSL",
+        "NEWS",
+        "CORPORATE",
+        "CUSTOM"
+      ]
+    },
+    "scriptText": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sourceAssetIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      }
+    },
+    "audience": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "deadline": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "qualityPreference": {
+      "type": "string",
+      "enum": [
+        "RECOMMEND",
+        "ECONOMY",
+        "BALANCED",
+        "MAX_QUALITY"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "DRAFT",
+        "READY",
+        "SUBMITTED",
+        "CANCELLED"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

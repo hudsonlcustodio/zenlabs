@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zenlabs.local/schemas/production-policy.schema.json",
+  "title": "ProductionPolicy",
+  "type": "object",
+  "required": [
+    "id",
+    "tenantId",
+    "clientId",
+    "version",
+    "allowedPacks",
+    "reviewMode",
+    "maxCostPerProduction",
+    "maxAutomaticAttempts"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "tenantId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "clientId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "allowedPacks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reviewMode": {
+      "type": "string",
+      "enum": [
+        "ALWAYS_HUMAN",
+        "EXCEPTION_ONLY",
+        "SAMPLE",
+        "AUTO_RELEASE"
+      ]
+    },
+    "sampleRate": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "maxCostPerProduction": {
+      "type": "object",
+      "required": [
+        "currency",
+        "amount"
+      ],
+      "properties": {
+        "currency": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "maxAutomaticAttempts": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "allowPremiumFallback": {
+      "type": "boolean"
+    },
+    "sensitiveTopics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "autoPublish": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

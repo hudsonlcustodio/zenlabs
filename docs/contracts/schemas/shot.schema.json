@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zenlabs.local/schemas/shot.schema.json",
+  "title": "Shot",
+  "type": "object",
+  "required": [
+    "id",
+    "tenantId",
+    "productionId",
+    "sceneId",
+    "order",
+    "type",
+    "targetDurationSeconds",
+    "routingClass",
+    "qualityTier",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "tenantId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "productionId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "sceneId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "order": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "PRESENTER",
+        "MOTION",
+        "BROLL",
+        "SLIDE",
+        "GRAPHIC",
+        "SCREEN",
+        "PRODUCT",
+        "TRANSITION"
+      ]
+    },
+    "targetDurationSeconds": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "routingClass": {
+      "type": "string"
+    },
+    "qualityTier": {
+      "type": "string",
+      "enum": [
+        "STANDARD",
+        "HIGH",
+        "PREMIUM"
+      ]
+    },
+    "scriptStartMs": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "scriptEndMs": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "audioStartMs": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "audioEndMs": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "visualIntent": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "framing": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "environment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "action": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cameraDirection": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "identityRequired": {
+      "type": "boolean"
+    },
+    "voiceRequired": {
+      "type": "boolean"
+    },
+    "motionReferenceId": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PLANNED",
+        "ROUTABLE",
+        "QUEUED",
+        "GENERATING",
+        "QC",
+        "REPAIRING",
+        "REGENERATING",
+        "ACCEPTED",
+        "HUMAN_REVIEW",
+        "FAILED",
+        "CANCELLED"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

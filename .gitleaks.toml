@@ -1,0 +1,35 @@
+# gitleaks configuration — FF-19 (fitness-functions.md), ADR-0022.
+#
+# Runs in CI as `gitleaks detect --no-git=false --redact`, which scans commit
+# history rather than only the working tree, and in the pre-commit hook.
+#
+# The allowlist is deliberately minimal: every entry is a hole in the check.
+
+title = "ZENLABS secret scanning"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Non-secret paths and values"
+
+paths = [
+  '''(^|/)pnpm-lock\.yaml$''',
+  '''(^|/)node_modules/''',
+  '''(^|/)dist/''',
+  '''(^|/)coverage/''',
+  # Generated build output. Not tracked (see .gitignore); listed so a working
+  # tree scan after `pnpm build` does not report Next.js build manifests.
+  '''(^|/)\.next/''',
+  # The FF-19 rule definitions and their tests describe credential *shapes*.
+  # They contain no credential; the tests synthesise fixtures at runtime into a
+  # temporary directory precisely so nothing credential-shaped is ever tracked.
+  '''^scripts/fitness/lib/secret-scan\.mjs$''',
+  '''^scripts/fitness/ff-19-no-committed-secret\.mjs$''',
+  '''^test/security/ff-19\.test\.mjs$''',
+  '''^\.gitleaks\.toml$''',
+]
+
+regexes = [
+  '''(?i)^(changeme|placeholder|example|redacted|dummy|sample)$''',
+]

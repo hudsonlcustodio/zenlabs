@@ -1,0 +1,21 @@
+{
+  "name": "@zenlabs/contracts",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Zod schemas, DTOs, domain event payloads, error codes. No I/O.",
+  "license": "UNLICENSED",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "zenlabs": {
+    "kind": "package",
+    "architectureRef": "architecture.md §2.2",
+    "allowedDependencies": []
+  },
+  "dependencies": {
+    "zod": "3.25.76"
+  }
+}

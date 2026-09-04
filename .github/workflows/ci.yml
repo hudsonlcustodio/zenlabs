@@ -1,0 +1,110 @@
+name: CI
+
+# cicd.md §5 — development gate: push to any branch; staging gate: merge to main.
+# P1.06 AC-4: the pipeline runs on pull request and on merge to `main`.
+on:
+  push:
+    branches: ['**']
+  pull_request:
+    branches: [main]
+
+# cicd.md §1 — "Every stage is blocking. No stage may be skipped on the default
+# branch." Ordering is expressed with `needs`, so a red stage prevents every
+# later stage from reporting success (AC-1, EX-P1-06a).
+#
+# cicd.md §2 / P1.06 AC-5 — no job holds a provider credential. PROVIDER_MODE is
+# forced to `mock` for every job; this is the FF-08 precondition.
+env:
+  APP_ENV: development
+  PROVIDER_MODE: mock
+
+# cicd.md §6 — OIDC federation only. No long-lived AWS keys in repository
+# secrets. Wave 1 needs no cloud access at all.
+#
+# `pull-requests: read` is the minimum gitleaks-action needs to enumerate the
+# commits of a pull request; it cannot write anything. No PAT and no manually
+# created secret is involved — GITHUB_TOKEN is the ephemeral token GitHub mints
+# per job and revokes when the job ends.
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ── Stage 1 ────────────────────────────────────────────────────────────────
+  lint:
+    name: '1 · lint'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
+      - run: pnpm lint
+
+  # ── Stage 2 ────────────────────────────────────────────────────────────────
+  typecheck:
+    name: '2 · typecheck'
+    needs: [lint]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
+      - run: pnpm typecheck
+
+  # ── Stage 3 ────────────────────────────────────────────────────────────────
+  unit:
+    name: '3 · unit'
+    needs: [typecheck]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
+      - run: pnpm test
+
+  # ── Stage 4 ────────────────────────────────────────────────────────────────
+  # Ephemeral PostgreSQL and LocalStack services are attached by P2 and P4,
+  # which own the first suites that need them. The stage exists from the first
+  # commit so no later epic has to invent it.
+  integration:
+    name: '4 · integration'
+    needs: [unit]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
+      - run: pnpm test:integration
+
+  # ── Stage 5 ────────────────────────────────────────────────────────────────
+  # Fitness functions are a first-class stage, not an optional job (AC-2).
+  security-static:
+    name: '5 · security/static'
+    needs: [integration]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # FF-19 scans history, not only the diff (P1.07 AC-3).
+          fetch-depth: 0
+      - uses: ./.github/actions/setup
+
+      - name: Dependency audit
+        run: pnpm audit --audit-level high
+
+      # FF-19 — ADR-0022. gitleaks scans commit history, not only the working
+      # tree; --redact keeps values out of the build log. Installed here so the
+      # history layer is always exercised in CI even though the built-in
+      # scanner in `pnpm fitness` runs everywhere.
+      - name: Secret scan (gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          # Required since gitleaks-action v2 to enumerate pull-request commits.
+          # This is the ephemeral per-job token, not a PAT and not a stored
+          # secret; it is scoped by the `permissions` block above.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_ENABLE_UPLOAD_ARTIFACT: 'false'
+          GITLEAKS_ENABLE_SUMMARY: 'true'
+
+      - name: Fitness functions
+        run: pnpm fitness

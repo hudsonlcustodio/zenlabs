@@ -1,0 +1,26 @@
+{
+  "name": "@zenlabs/worker-ai",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Briefing, script, caption, brand-compliance generation; knowledge ingestion and embedding.",
+  "license": "UNLICENSED",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "start": "node dist/main.js"
+  },
+  "zenlabs": {
+    "kind": "app",
+    "architectureRef": "architecture.md §2.1",
+    "allowedDependencies": [
+      "@zenlabs/config",
+      "@zenlabs/observability"
+    ],
+    "bootstrappedBy": "P1.09"
+  },
+  "dependencies": {
+    "@zenlabs/config": "workspace:*",
+    "@zenlabs/observability": "workspace:*"
+  }
+}

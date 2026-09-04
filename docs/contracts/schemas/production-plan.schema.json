@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zenlabs.local/schemas/production-plan.schema.json",
+  "title": "ProductionPlan",
+  "type": "object",
+  "required": [
+    "id",
+    "tenantId",
+    "productionRequestId",
+    "productionPackId",
+    "productionPackVersion",
+    "chapters",
+    "provenance"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "tenantId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "productionRequestId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "productionPackId": {
+      "type": "string"
+    },
+    "productionPackVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "estimatedDurationSeconds": {
+      "type": "number",
+      "minimum": 0
+    },
+    "chapters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "order",
+          "title",
+          "scenes"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "order": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "title": {
+            "type": "string"
+          },
+          "scenes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "order",
+                "shots"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "order": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "shots": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "shot.schema.json"
+                  }
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "planner",
+        "model",
+        "templateVersion"
+      ],
+      "properties": {
+        "planner": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "templateVersion": {
+          "type": "string"
+        },
+        "sourceRefs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

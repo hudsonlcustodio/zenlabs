@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zenlabs.local/schemas/provider-capability.schema.json",
+  "title": "ProviderCapabilitySnapshot",
+  "type": "object",
+  "required": [
+    "id",
+    "provider",
+    "capability",
+    "model",
+    "capturedAt",
+    "healthStatus",
+    "supported"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "capability": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "modelVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "capturedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expiresAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "supported": {
+      "type": "boolean"
+    },
+    "healthStatus": {
+      "type": "string",
+      "enum": [
+        "HEALTHY",
+        "DEGRADED",
+        "UNAVAILABLE",
+        "UNKNOWN"
+      ]
+    },
+    "maxDurationSeconds": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "supportedResolutions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "concurrencyLimit": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "rateCardVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

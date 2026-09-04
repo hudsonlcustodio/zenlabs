@@ -1,0 +1,40 @@
+{
+  "product": {
+    "name": "ZENLABS | Laboratório de Clones",
+    "slug": "zenlabs"
+  },
+  "repository": "https://github.com/hudsonlcustodio/zenlabs",
+  "foundationVersion": "2.0",
+  "date": "2026-09-01",
+  "gateZero": [
+    "GZ-C",
+    "GZ-D"
+  ],
+  "currentGate": "GATE-FOUNDATION-V2",
+  "architecture": {
+    "style": "modular-monolith-with-async-workers",
+    "production": "exception-driven",
+    "providerStrategy": "multi-model-provider-agnostic",
+    "identitySourceOfTruth": "ZENLABS"
+  },
+  "operatingModel": {
+    "name": "Production Pods",
+    "initialClientsPerSupervisorApprox": 100,
+    "availableSupervisorHoursPerMonthApprox": 120,
+    "ratioIsHardInvariant": false
+  },
+  "canonicalRoles": [
+    "Client / Knowledge Owner",
+    "ZENLABS Human Production Supervisor",
+    "ZENLABS AI Production Director",
+    "ZENLABS Production System"
+  ],
+  "backlog": {
+    "epics": 28,
+    "specs": 48,
+    "stories": 112
+  },
+  "machineReadableSchemas": 11,
+  "legacyRoot": "docs/_legacy/vyra-p1",
+  "nextGate": "GATE-TECH-FOUNDATION-001"
+}

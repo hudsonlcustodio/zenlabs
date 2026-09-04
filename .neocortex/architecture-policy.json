@@ -1,0 +1,24 @@
+{
+  "product": "ZENLABS | Laboratório de Clones",
+  "foundationVersion": "2.0",
+  "canonicalDecisionFile": "docs/00_GOVERNANCE/DECISIONS.md",
+  "legacyRoot": "docs/_legacy/vyra-p1",
+  "rules": {
+    "legacyIsNeverCanonical": true,
+    "modularMonolithDefault": true,
+    "providerSdkInDomainForbidden": true,
+    "aiCannotAuthorizeSpend": true,
+    "aiCannotOverrideConsent": true,
+    "productionBudgetRequired": true,
+    "boundedRetriesRequired": true,
+    "tenantScopeRequired": true,
+    "autoReleaseRequiresPolicy": true,
+    "exceptionDrivenProduction": true
+  },
+  "roles": {
+    "ROLE-001": "Client / Knowledge Owner",
+    "ROLE-002": "ZENLABS Human Production Supervisor",
+    "ROLE-003": "ZENLABS AI Production Director",
+    "ROLE-004": "ZENLABS Production System"
+  }
+}

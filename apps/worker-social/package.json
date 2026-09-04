@@ -1,0 +1,26 @@
+{
+  "name": "@zenlabs/worker-social",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Publication, token refresh, performance collection.",
+  "license": "UNLICENSED",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "start": "node dist/main.js"
+  },
+  "zenlabs": {
+    "kind": "app",
+    "architectureRef": "architecture.md §2.1",
+    "allowedDependencies": [
+      "@zenlabs/config",
+      "@zenlabs/observability"
+    ],
+    "bootstrappedBy": "P1.09"
+  },
+  "dependencies": {
+    "@zenlabs/config": "workspace:*",
+    "@zenlabs/observability": "workspace:*"
+  }
+}

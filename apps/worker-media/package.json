@@ -1,0 +1,26 @@
+{
+  "name": "@zenlabs/worker-media",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Voice synthesis, video render submission, provider polling, media ingestion to S3.",
+  "license": "UNLICENSED",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "start": "node dist/main.js"
+  },
+  "zenlabs": {
+    "kind": "app",
+    "architectureRef": "architecture.md §2.1",
+    "allowedDependencies": [
+      "@zenlabs/config",
+      "@zenlabs/observability"
+    ],
+    "bootstrappedBy": "P1.09"
+  },
+  "dependencies": {
+    "@zenlabs/config": "workspace:*",
+    "@zenlabs/observability": "workspace:*"
+  }
+}

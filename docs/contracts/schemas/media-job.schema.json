@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zenlabs.local/schemas/media-job.schema.json",
+  "title": "MediaJob",
+  "type": "object",
+  "required": [
+    "id",
+    "tenantId",
+    "productionId",
+    "shotId",
+    "routingClass",
+    "provider",
+    "providerModel",
+    "idempotencyKey",
+    "attempt",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "tenantId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "productionId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "shotId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "routingClass": {
+      "type": "string"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "providerModel": {
+      "type": "string"
+    },
+    "providerJobId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "idempotencyKey": {
+      "type": "string",
+      "minLength": 8
+    },
+    "attempt": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "QUEUED",
+        "SUBMITTED",
+        "RUNNING",
+        "SUCCEEDED",
+        "INGESTED",
+        "FAILED_RETRYABLE",
+        "FAILED_PERMANENT",
+        "CANCELLED",
+        "QUARANTINED"
+      ]
+    },
+    "estimatedCost": {
+      "type": "object",
+      "required": [
+        "currency",
+        "amount"
+      ],
+      "properties": {
+        "currency": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "actualCost": {
+      "anyOf": [
+        {
+          "type": "object",
+          "required": [
+            "currency",
+            "amount"
+          ],
+          "properties": {
+            "currency": {
+              "type": "string",
+              "minLength": 3,
+              "maxLength": 3
+            },
+            "amount": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "capabilitySnapshotId": {
+      "type": "string",
+      "format": "uuid"
+    }
+  },
+  "additionalProperties": false
+}

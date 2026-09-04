@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zenlabs.local/schemas/production-exception.schema.json",
+  "title": "ProductionException",
+  "type": "object",
+  "required": [
+    "id",
+    "tenantId",
+    "productionId",
+    "type",
+    "severity",
+    "reasonCode",
+    "status",
+    "createdAt"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "tenantId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "productionId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "shotId": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "IDENTITY_RISK",
+        "CONSENT_BLOCK",
+        "CONTENT_RISK",
+        "LOW_QC_CONFIDENCE",
+        "LIPSYNC_FAILURE",
+        "VOICE_FAILURE",
+        "CONTINUITY_FAILURE",
+        "BUDGET_GUARD",
+        "PROVIDER_EXHAUSTED",
+        "PROVIDER_OUTAGE",
+        "ASSEMBLY_FAILURE",
+        "POLICY_VIOLATION",
+        "PUBLICATION_FAILURE"
+      ]
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH",
+        "CRITICAL"
+      ]
+    },
+    "reasonCode": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "recommendedAction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retryCostEstimate": {
+      "anyOf": [
+        {
+          "type": "object",
+          "required": [
+            "currency",
+            "amount"
+          ],
+          "properties": {
+            "currency": {
+              "type": "string",
+              "minLength": 3,
+              "maxLength": 3
+            },
+            "amount": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "slaDueAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "OPEN",
+        "ASSIGNED",
+        "RESOLVING",
+        "RESOLVED",
+        "WAIVED",
+        "ESCALATED"
+      ]
+    },
+    "assignedSupervisorId": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uuid"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

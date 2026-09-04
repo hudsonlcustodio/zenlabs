@@ -1,0 +1,23 @@
+name: 'Setup ZENLABS toolchain'
+description: >-
+  Installs the Node and pnpm versions pinned in the repository (P1.01 AC-2) and
+  restores the pnpm store. Every CI job uses this so no job can silently run on
+  a different toolchain than a developer machine.
+
+runs:
+  using: composite
+  steps:
+    - name: Install pnpm from the pinned packageManager field
+      uses: pnpm/action-setup@v4
+
+    - name: Install Node from .nvmrc
+      uses: actions/setup-node@v4
+      with:
+        node-version-file: .nvmrc
+        cache: pnpm
+
+    - name: Install dependencies
+      shell: bash
+      # --frozen-lockfile: CI never silently resolves a different tree than the
+      # committed lockfile (ADR-0002: "one lockfile, atomic cross-cutting changes").
+      run: pnpm install --frozen-lockfile

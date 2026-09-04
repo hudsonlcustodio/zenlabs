@@ -1,0 +1,34 @@
+{
+  "name": "@zenlabs/web",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Next.js App Router. Portal + Studio + Control surfaces.",
+  "license": "UNLICENSED",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "next build && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "start": "node dist/main.js",
+    "dev": "next dev"
+  },
+  "zenlabs": {
+    "kind": "app",
+    "architectureRef": "architecture.md §2.1",
+    "allowedDependencies": [
+      "@zenlabs/config",
+      "@zenlabs/observability"
+    ],
+    "bootstrappedBy": "P1.02 (process shell); surfaces P15+, design system P18"
+  },
+  "dependencies": {
+    "@zenlabs/config": "workspace:*",
+    "@zenlabs/observability": "workspace:*",
+    "next": "15.5.24",
+    "react": "19.0.8",
+    "react-dom": "19.0.8"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5"
+  }
+}
