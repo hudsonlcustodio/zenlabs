@@ -2,6 +2,10 @@
 // Provider ports + adapters + capability registry + error taxonomy.
 // architecture.md §2.2 — may depend on: contracts.
 
+import { ERROR_CODES } from '@zenlabs/contracts';
+
+void ERROR_CODES;
+
 export type CapabilityKind = 'VOICE' | 'VIDEO' | 'IMAGE';
 export interface ProviderCapability { provider: string; capability: CapabilityKind; routingClass: string; qualityTier: 'STANDARD' | 'HIGH' | 'PREMIUM'; eligible: boolean; }
 export interface MediaJob { id: string; tenantId: string; capability: CapabilityKind; routingClass: string; idempotencyKey: string; }
