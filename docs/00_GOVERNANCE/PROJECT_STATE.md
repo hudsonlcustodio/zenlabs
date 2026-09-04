@@ -1,10 +1,10 @@
 # PROJECT STATE — ZENLABS FOUNDATION V2
 
 **Product:** ZENLABS | Laboratório de Clones  
-**Date:** 2026-09-01  
+**Date:** 2026-09-04  
 **Gate Zero:** GZ-C + GZ-D — evolução estrutural + auditoria/migração de repositório  
 **Mode:** FOUNDATION / ARCHITECTURE / REPO-AUDIT  
-**Current gate:** `GATE-TECH-FOUNDATION-001`
+**Current gate:** `GATE-TECH-FOUNDATION-001 = APROVADO`
 
 ## Estado real
 
@@ -37,7 +37,6 @@
 
 ## Gaps abertos
 
-- GATE-TECH-001: validar/modernizar versões de runtime e dependências.
 - GATE-MEDIA-001: benchmark de providers.
 - GATE-QC-001: calibrar thresholds de QC.
 - GATE-LOAD-001: workload model real.
@@ -47,7 +46,7 @@
 
 ## Próxima ação
 
-Passar `GATE-FOUNDATION-V2`, depois executar Technical Foundation Gate e o primeiro vertical slice com providers mockados.
+Iniciar o primeiro vertical slice com providers mockados, preservando os contratos e guardrails aprovados.
 
 ## Gate de UX aprovado
 

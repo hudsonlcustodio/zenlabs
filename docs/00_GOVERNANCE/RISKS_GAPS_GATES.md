@@ -93,5 +93,5 @@ Passa quando:
 ## GATE-UX-FOUNDATION-001 — APROVADO
 Aprovado pelo usuário após revisão do protótipo canônico e correção dos ícones da navegação.
 
-## GATE-TECH-FOUNDATION-001 — EM ANDAMENTO
-Decisão candidata documentada. Falta evidência executável de install/lint/typecheck/test/build/fitness/audit/smoke no toolchain alvo.
+## GATE-TECH-FOUNDATION-001 — APROVADO
+Aprovado em 2026-09-04 no baseline Node.js 24.20.0, pnpm 11.25.0, Next.js 16.3.4 e React 19.2.8. Install congelado, lint, typecheck, 330 testes, build, fitness, audit e smokes passaram. Risco residual aceito: duas vulnerabilidades moderadas em `qs@6.15.3`, sem finding alto ou crítico.

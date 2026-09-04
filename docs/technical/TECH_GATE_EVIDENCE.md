@@ -1,6 +1,6 @@
 # EVIDÊNCIA — TECHNICAL FOUNDATION
 
-**Data:** 2026-09-02
+**Data:** 2026-09-04
 
 ## Checks executados neste ambiente
 
@@ -30,11 +30,19 @@ TECH DECISION VALIDATION PASS — selective-modernization data=postgres17 auth=c
 - pnpm: indisponível localmente
 - registry npm: indisponível no ambiente de artefato
 
+## Evidência final
+
+- Bootstrap: `f0d991e2c1272ff12d7e3a75e6a01568271af370`.
+- Baseline adotado: `813d8bac434e77ca1208b519e6efdba5c0118c07`.
+- CI limpa e congelada: `https://github.com/hudsonlcustodio/zenlabs/actions/runs/33889942506`.
+- Technical Foundation Candidate final: `https://github.com/hudsonlcustodio/zenlabs/actions/runs/33890719234`.
+- Node.js 24.20.0; pnpm 11.25.0; Next.js 16.3.4; React 19.2.8.
+- Install, lint, typecheck, 330 testes, build, fitness, audit e smokes: aprovados.
+- Dependency audit: 0 critical, 0 high, 2 moderate em `qs@6.15.3`, risco provisoriamente aceito pelo usuário.
+
 ## Consequência
 
-A decisão técnica e os artefatos estáticos estão validados.
-
-O `GATE-TECH-FOUNDATION-001` **continua aberto**, porque ainda faltam evidências dependentes do toolchain alvo e instalação de dependências.
+`GATE-TECH-FOUNDATION-001 = APROVADO`.
 
 ## Comando de execução em ambiente habilitado
 

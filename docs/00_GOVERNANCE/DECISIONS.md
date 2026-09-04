@@ -81,8 +81,8 @@ Máximo automático inicial por shot: 3 attempts, sempre subordinado ao budget g
 White premium; provider internals somente em superfícies internas avançadas.
 
 ## DEC-ZEN-021 — Versões técnicas
-**Status:** [DECISÃO PENDENTE]  
-A migração preserva o lockfile/version set do scaffold para evitar uma atualização major não validada. `GATE-TECH-001` decide modernização.
+**Status:** [DECISÃO APROVADA]  
+Baseline congelado em 2026-09-04: Node.js 24.20.0, pnpm 11.25.0, Next.js 16.3.4 e React 19.2.8; NestJS 11.2.3, TypeScript 5.9.3, Vitest 3.2.7 e Zod 3.25.76 permanecem preservados.
 
 ## DEC-ZEN-022 — Compact, low-text product UI
 **Status:** [DECISÃO APROVADA]  
@@ -109,8 +109,8 @@ A interface deve ser intuitiva, com pouco texto, tipografia compacta e refinada,
 O pacote `docs/uiux/` e o protótipo `prototypes/uiux-canonica/` são a proposta canônica pronta para revisão visual final antes da implementação do frontend.
 
 ## DEC-ZEN-028 — Estratégia do Technical Foundation Gate
-**Status:** [PROPOSTA]  
-Adotar modernização seletiva: atualizar runtime/frontend para linhas atuais de suporte, manter backend/contratos/testes em majors já validados até o primeiro vertical slice, e separar modernização de NestJS/TypeScript/Zod/Vitest em um gate posterior.
+**Status:** [DECISÃO APROVADA]  
+Modernização seletiva validada pelo `GATE-TECH-FOUNDATION-001`: runtime/frontend atualizados e backend/contratos/testes preservados nos majors já validados. Modernizações de NestJS/TypeScript/Zod/Vitest permanecem em gate posterior.
 
 ## DEC-ZEN-029 — Banco e acesso a dados
 **Status:** [PROPOSTA]  
