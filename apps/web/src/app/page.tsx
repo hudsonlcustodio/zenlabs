@@ -1,3 +1,5 @@
+import { NewProductionFlow } from './new-production-flow';
+
 const productions = [
   { title: 'Boletim semanal', client: 'Aurora Saúde', stage: 'Planejamento', route: 'Apresentador direto', cost: 'R$ 5,00' },
   { title: 'Treinamento comercial', client: 'Norte Educação', stage: 'Pronto para mídia', route: 'Voice Master + visual', cost: 'R$ 9,00' },
@@ -12,7 +14,7 @@ export default function Page() {
       <div className="tenant"><strong>Aurum Soltec</strong><span>Ambiente simulado</span></div>
     </aside>
     <section className="workspace" id="visao-geral">
-      <header className="topbar"><div><p className="kicker">Centro de produção</p><h1>Operação sob controle</h1></div><button type="button">Nova produção</button></header>
+      <header className="topbar"><div><p className="kicker">Centro de produção</p><h1>Operação sob controle</h1></div><NewProductionFlow /></header>
       <div className="notice" role="status"><strong>Wave 3 ativa em modo simulado.</strong> Providers reais permanecem bloqueados até o gate de mídia.</div>
       <section className="metrics" aria-label="Indicadores operacionais">
         <article><span>Produções abertas</span><strong>12</strong><small>3 exigem atenção</small></article><article><span>Clones ativos</span><strong>8</strong><small>Consentimento válido</small></article><article><span>Jobs de mídia</span><strong>24</strong><small>Sem duplicidade detectada</small></article><article><span>Orçamento reservado</span><strong>R$ 73</strong><small>Dados simulados</small></article>
