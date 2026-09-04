@@ -46,7 +46,8 @@
 
 ## Próxima ação
 
-Iniciar o primeiro vertical slice com providers mockados, preservando os contratos e guardrails aprovados.
+Implementar a camada de aplicação do primeiro vertical slice sobre os contratos
+da Wave 1, com persistência mockada e sem providers reais.
 
 ## Gate de UX aprovado
 

@@ -59,3 +59,19 @@ export {
   type DomainEventPayloads,
   type PayloadOf,
 } from './events/domain-event';
+
+// Wave 1 identity vertical slice — tenant-scoped contracts.
+export {
+  auditEventSchema,
+  clientSchema,
+  consentSchema,
+  digitalTwinSchema,
+  identityPackSchema,
+  tenantSchema,
+  type AuditEvent,
+  type Client,
+  type Consent,
+  type DigitalTwin,
+  type IdentityPack,
+  type Tenant,
+} from './identity/identity-slice';

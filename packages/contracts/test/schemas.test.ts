@@ -14,6 +14,14 @@ import {
   domainEventEnvelopeSchema,
   domainEventSchema,
 } from '../src/events/domain-event';
+import {
+  auditEventSchema,
+  clientSchema,
+  consentSchema,
+  digitalTwinSchema,
+  identityPackSchema,
+  tenantSchema,
+} from '../src/identity/identity-slice';
 
 describe('problem details — RFC 9457 (api-contracts.md §1)', () => {
   it('uses the problem+json media type', () => {
@@ -148,5 +156,42 @@ describe('domain events (architecture.md §6) — AC-3', () => {
     expect(
       domainEventSchema.safeParse({ ...envelope, name: 'ScriptApproved', payload: {} }).success,
     ).toBe(true);
+  });
+});
+
+describe('Wave 1 identity vertical slice contracts', () => {
+  const tenantId = 'b3d1a2c4-5e6f-4a7b-8c9d-0e1f2a3b4c5d';
+  const clientId = 'c3d1a2c4-5e6f-4a7b-8c9d-0e1f2a3b4c5d';
+  const twinId = 'd3d1a2c4-5e6f-4a7b-8c9d-0e1f2a3b4c5d';
+  const consentId = 'e3d1a2c4-5e6f-4a7b-8c9d-0e1f2a3b4c5d';
+  const packId = 'f3d1a2c4-5e6f-4a7b-8c9d-0e1f2a3b4c5d';
+  const now = '2026-09-04T12:00:00.000Z';
+
+  it('requires tenant scope on every client-owned identity record', () => {
+    const records = [
+      clientSchema,
+      consentSchema,
+      digitalTwinSchema,
+      identityPackSchema,
+      auditEventSchema,
+    ];
+    for (const schema of records) {
+      expect(schema.safeParse({}).success).toBe(false);
+    }
+    expect(tenantSchema.parse({ id: tenantId, name: 'Acme', createdAt: now }).id).toBe(tenantId);
+  });
+
+  it('accepts the complete tenant → client → consent → twin → pack → audit chain', () => {
+    expect(clientSchema.parse({ id: clientId, tenantId, name: 'Ana', status: 'ACTIVE', createdAt: now })).toMatchObject({ tenantId });
+    expect(consentSchema.parse({ id: consentId, tenantId, clientId, scope: ['DIGITAL_TWIN', 'IDENTITY_PACK'], status: 'GRANTED', evidenceRef: 'consent:e3', grantedAt: now, revokedAt: null })).toMatchObject({ tenantId, clientId });
+    expect(digitalTwinSchema.parse({ id: twinId, tenantId, clientId, consentId, status: 'DRAFT', activeIdentityPackVersion: null, createdAt: now, updatedAt: now })).toMatchObject({ tenantId, consentId });
+    expect(identityPackSchema.parse({ id: packId, tenantId, digitalTwinId: twinId, version: 1, status: 'DRAFT', assetRefs: ['s3://private/ref-front'], createdAt: now })).toMatchObject({ tenantId, digitalTwinId: twinId });
+    expect(auditEventSchema.parse({ eventId: 'a3d1a2c4-5e6f-4a7b-8c9d-0e1f2a3b4c5d', tenantId, actorType: 'SYSTEM', action: 'identity_pack.created', entityType: 'IDENTITY_PACK', entityId: packId, occurredAt: now, metadata: { version: 1 } })).toMatchObject({ tenantId, entityId: packId });
+  });
+
+  it('rejects revoked consent as active and rejects provider IDs as identity', () => {
+    expect(consentSchema.safeParse({ id: consentId, tenantId, clientId, scope: ['DIGITAL_TWIN'], status: 'REVOKED', evidenceRef: 'consent:e3', grantedAt: now, revokedAt: null }).success).toBe(false);
+    expect(digitalTwinSchema.safeParse({ id: twinId, tenantId, clientId, consentId, providerId: 'provider-123', status: 'DRAFT', activeIdentityPackVersion: null, createdAt: now, updatedAt: now }).success).toBe(true);
+    expect(digitalTwinSchema.parse({ id: twinId, tenantId, clientId, consentId, providerId: 'provider-123', status: 'DRAFT', activeIdentityPackVersion: null, createdAt: now, updatedAt: now })).not.toHaveProperty('providerId');
   });
 });
