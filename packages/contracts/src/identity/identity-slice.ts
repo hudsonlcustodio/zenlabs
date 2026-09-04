@@ -58,6 +58,16 @@ export const identityPackSchema = z.object({
   createdAt: timestamp,
 });
 
+export const voiceProfileSchema = z.object({
+  id: uuid,
+  tenantId: uuid,
+  clientId: uuid,
+  consentId: uuid,
+  version: z.number().int().positive(),
+  status: z.enum(['DRAFT', 'CALIBRATED', 'RETIRED']),
+  createdAt: timestamp,
+});
+
 export const auditEventSchema = z.object({
   eventId: uuid,
   tenantId: uuid,
@@ -74,4 +84,5 @@ export type Client = z.infer<typeof clientSchema>;
 export type Consent = z.infer<typeof consentSchema>;
 export type DigitalTwin = z.infer<typeof digitalTwinSchema>;
 export type IdentityPack = z.infer<typeof identityPackSchema>;
+export type VoiceProfile = z.infer<typeof voiceProfileSchema>;
 export type AuditEvent = z.infer<typeof auditEventSchema>;

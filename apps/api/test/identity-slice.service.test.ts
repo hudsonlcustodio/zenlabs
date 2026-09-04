@@ -35,4 +35,13 @@ describe('Wave 1 identity application slice', () => {
     expect(second).toEqual(first);
     expect(store.listAudit().at(-1)?.action).toBe('CONSENT_REVOKED');
   });
+
+  it('creates a calibrated voice profile only with voice consent', () => {
+    const store = new InMemoryIdentityStore();
+    const service = new IdentitySliceService(store, clock, ids);
+    const result = service.start({ tenantName: 'Acme', clientName: 'Ana', consentScope: ['DIGITAL_TWIN', 'VOICE'] });
+    const profile = service.createVoiceProfile(result.tenant.id, result.client.id, result.consent);
+    expect(profile.status).toBe('CALIBRATED');
+    expect(store.getVoiceProfile(profile.id)).toEqual(profile);
+  });
 });

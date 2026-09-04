@@ -1,4 +1,4 @@
-import type { AuditEvent, Client, Consent, DigitalTwin, IdentityPack, Tenant } from '@zenlabs/contracts';
+import type { AuditEvent, Client, Consent, DigitalTwin, IdentityPack, Tenant, VoiceProfile } from '@zenlabs/contracts';
 import type { IdentityStore } from '../application/identity-slice.service';
 
 export class InMemoryIdentityStore implements IdentityStore {
@@ -8,6 +8,7 @@ export class InMemoryIdentityStore implements IdentityStore {
   private readonly twins = new Map<string, DigitalTwin>();
   private readonly packs = new Map<string, IdentityPack>();
   private readonly audits: AuditEvent[] = [];
+  private readonly voiceProfiles = new Map<string, VoiceProfile>();
 
   save(record: Tenant | Client | Consent | DigitalTwin | IdentityPack): void {
     if ('activeIdentityPackVersion' in record || ('consentId' in record && 'updatedAt' in record)) this.twins.set(record.id, record as DigitalTwin);
@@ -21,6 +22,8 @@ export class InMemoryIdentityStore implements IdentityStore {
   getConsent(id: string): Consent | undefined { return this.consents.get(id); }
   getTwin(id: string): DigitalTwin | undefined { return this.twins.get(id); }
   getPack(id: string): IdentityPack | undefined { return this.packs.get(id); }
+  saveVoiceProfile(profile: VoiceProfile): void { this.voiceProfiles.set(profile.id, profile); }
+  getVoiceProfile(id: string): VoiceProfile | undefined { return this.voiceProfiles.get(id); }
   appendAudit(event: AuditEvent): void { this.audits.push(event); }
   listAudit(): AuditEvent[] { return [...this.audits]; }
 }

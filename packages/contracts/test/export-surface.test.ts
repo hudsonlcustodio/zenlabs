@@ -43,6 +43,7 @@ const EXPECTED_RUNTIME_EXPORTS = [
   'problemDetailsSchema',
   'tenantSchema',
   'validationIssueSchema',
+  'voiceProfileSchema',
 ];
 
 /** Type-only exports, asserted against the source of the barrel file. */
@@ -63,6 +64,7 @@ const EXPECTED_TYPE_EXPORTS = [
   'ProblemDetails',
   'Tenant',
   'ValidationIssue',
+  'VoiceProfile',
 ];
 
 describe('public export surface snapshot (AC-4)', () => {

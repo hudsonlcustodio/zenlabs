@@ -1,4 +1,4 @@
-import type { AuditEvent, Client, Consent, DigitalTwin, IdentityPack, Tenant } from '@zenlabs/contracts';
+import type { AuditEvent, Client, Consent, DigitalTwin, IdentityPack, Tenant, VoiceProfile } from '@zenlabs/contracts';
 import { assertCanActivate, assertConsentAllowsIdentity } from '../domain/identity-policy';
 
 export interface IdentityStore {
@@ -8,6 +8,8 @@ export interface IdentityStore {
   getConsent(id: string): Consent | undefined;
   getTwin(id: string): DigitalTwin | undefined;
   getPack(id: string): IdentityPack | undefined;
+  saveVoiceProfile(profile: VoiceProfile): void;
+  getVoiceProfile(id: string): VoiceProfile | undefined;
   appendAudit(event: AuditEvent): void;
   listAudit(): AuditEvent[];
 }
@@ -46,6 +48,16 @@ export class IdentitySliceService {
       ['DIGITAL_TWIN_CREATED', twin.id], ['IDENTITY_PACK_CALIBRATED', pack.id],
     ].forEach(([action, entityId]) => this.audit(action!, entityId!, tenant.id, createdAt));
     return { tenant, client, consent, twin, pack };
+  }
+
+  createVoiceProfile(tenantId: string, clientId: string, consent: Consent): VoiceProfile {
+    if (consent.tenantId !== tenantId || consent.clientId !== clientId || consent.status !== 'GRANTED' || !consent.scope.includes('VOICE')) {
+      throw new Error('voice_consent_required');
+    }
+    const profile: VoiceProfile = { id: this.ids.next('voice'), tenantId, clientId, consentId: consent.id, version: 1, status: 'CALIBRATED', createdAt: this.clock.now() };
+    this.store.saveVoiceProfile(profile);
+    this.audit('VOICE_PROFILE_CALIBRATED', profile.id, tenantId, profile.createdAt);
+    return profile;
   }
 
   activate(twinId: string, consentId: string, packId: string): DigitalTwin {

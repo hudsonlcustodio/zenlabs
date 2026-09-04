@@ -67,11 +67,13 @@ export {
   consentSchema,
   digitalTwinSchema,
   identityPackSchema,
+  voiceProfileSchema,
   tenantSchema,
   type AuditEvent,
   type Client,
   type Consent,
   type DigitalTwin,
   type IdentityPack,
+  type VoiceProfile,
   type Tenant,
 } from './identity/identity-slice';
