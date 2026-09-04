@@ -77,3 +77,11 @@ export {
   type VoiceProfile,
   type Tenant,
 } from './identity/identity-slice';
+
+// Wave 2 planning contracts — mock execution only.
+export {
+  productionBudgetSchema,
+  productionRequestSchema,
+  type ProductionBudget,
+  type ProductionRequest,
+} from './production/planning';
