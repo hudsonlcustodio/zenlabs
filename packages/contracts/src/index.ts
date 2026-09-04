@@ -82,6 +82,10 @@ export {
 export {
   productionBudgetSchema,
   productionRequestSchema,
+  productionPlanSchema,
+  shotSchema,
   type ProductionBudget,
+  type ProductionPlan,
   type ProductionRequest,
+  type Shot,
 } from './production/planning';
