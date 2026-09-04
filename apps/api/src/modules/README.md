@@ -36,6 +36,5 @@ every route, and each route has its own contract.
    module without one.
 3. Register it in `AppModule`'s `DOMAIN_MODULES` array.
 
-Empty in wave 1 by design: `architecture.md` §4 lists 23 modules and each
-arrives with the epic that owns it. `NG1` of epic P1 forbids shipping any of
-them here.
+The `identity` module is the first Wave 1 slice. It is contract-tested and
+kept out of Nest registration until its HTTP/authentication contract is ready.

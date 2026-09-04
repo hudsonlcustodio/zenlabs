@@ -239,20 +239,21 @@ describe('AC-6 — apps/api is stateless (NFR-11, precursor to FF-21)', () => {
   });
 });
 
-describe('AC-2 — the module layout is declared and empty', () => {
+describe('AC-2 — the module layout is declared and Wave 1 is isolated', () => {
   it('has a single documented domain-module registration point', () => {
     const appModule = readFileSync(join(API, 'src', 'app.module.ts'), 'utf8');
     expect(appModule).toContain('DOMAIN_MODULES');
     expect(existsSync(join(API, 'src', 'modules', 'README.md'))).toBe(true);
   });
 
-  it('registers no domain module in wave 1 (epic P1 NG1)', () => {
+  it('keeps the Wave 1 identity slice out of Nest registration until its HTTP contract is ready', () => {
     const appModule = readFileSync(join(API, 'src', 'app.module.ts'), 'utf8');
     expect(appModule).toMatch(/DOMAIN_MODULES[^=]*=\s*\[\s*\]/);
 
     const modules = readdirSync(join(API, 'src', 'modules'), { withFileTypes: true }).filter((e) =>
       e.isDirectory(),
     );
-    expect(modules).toEqual([]);
+    expect(modules.map((entry) => entry.name)).toEqual(['identity']);
+    expect(existsSync(join(API, 'src', 'modules', 'identity', 'module.manifest.json'))).toBe(true);
   });
 });

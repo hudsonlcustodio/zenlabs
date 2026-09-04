@@ -12,7 +12,7 @@ import { COMMIT_SHA } from './health/health.tokens';
 /**
  * The root module (P1.08 AC-2).
  *
- * The module layout is declared and empty: one root module and one
+ * The module layout is declared: one root module and one
  * per-domain-module registration point. A domain module is registered **here
  * and nowhere else** — see `src/modules/README.md`. Keeping registration in a
  * single array is what lets `architecture.md` §4.1 boundaries survive contact
@@ -24,8 +24,8 @@ import { COMMIT_SHA } from './health/health.tokens';
 /**
  * Domain modules, in registration order.
  *
- * Empty in wave 1. `architecture.md` §4 lists 23 modules; each arrives with the
- * epic that owns it, and epic P1 NG1 forbids shipping any of them here.
+ * The Wave 1 identity slice remains unregistered until its HTTP/auth contract
+ * is ready; registration still occurs only through this array.
  */
 export const DOMAIN_MODULES: Array<Type<unknown> | DynamicModule> = [];
 
