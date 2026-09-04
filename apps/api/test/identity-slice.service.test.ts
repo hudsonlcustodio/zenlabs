@@ -22,7 +22,17 @@ describe('Wave 1 identity application slice', () => {
     const store = new InMemoryIdentityStore();
     const service = new IdentitySliceService(store, clock, ids);
     const result = service.start({ tenantName: 'Acme', clientName: 'Ana', consentScope: ['DIGITAL_TWIN'] });
-    store.save({ ...result.consent, status: 'REVOKED', revokedAt: clock.now() });
+    service.revokeConsent(result.consent.id);
     expect(() => service.activate(result.twin.id, result.consent.id, result.pack.id)).toThrow('consent_required');
+  });
+
+  it('revocation is idempotent and leaves an auditable reason', () => {
+    const store = new InMemoryIdentityStore();
+    const service = new IdentitySliceService(store, clock, ids);
+    const result = service.start({ tenantName: 'Acme', clientName: 'Ana', consentScope: ['DIGITAL_TWIN'] });
+    const first = service.revokeConsent(result.consent.id);
+    const second = service.revokeConsent(result.consent.id);
+    expect(second).toEqual(first);
+    expect(store.listAudit().at(-1)?.action).toBe('CONSENT_REVOKED');
   });
 });

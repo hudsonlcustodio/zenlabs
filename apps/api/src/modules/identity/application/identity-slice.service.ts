@@ -60,6 +60,16 @@ export class IdentitySliceService {
     return active;
   }
 
+  revokeConsent(consentId: string, revokedAt = this.clock.now()): Consent {
+    const consent = this.store.getConsent(consentId);
+    if (!consent) throw new Error('consent_not_found');
+    if (consent.status === 'REVOKED') return consent;
+    const revoked: Consent = { ...consent, status: 'REVOKED', revokedAt };
+    this.store.save(revoked);
+    this.audit('CONSENT_REVOKED', revoked.id, revoked.tenantId, revokedAt);
+    return revoked;
+  }
+
   private audit(action: string, entityId: string, tenantId: string, occurredAt: string): void {
     const entityType = action.startsWith('TENANT') ? 'TENANT' : action.startsWith('CLIENT') ? 'CLIENT' : action.startsWith('CONSENT') ? 'CONSENT' : action.startsWith('IDENTITY') ? 'IDENTITY_PACK' : 'DIGITAL_TWIN';
     this.store.appendAudit({ eventId: this.ids.next('audit'), tenantId, actorType: 'SYSTEM', action, entityType, entityId, occurredAt, metadata: {} });
