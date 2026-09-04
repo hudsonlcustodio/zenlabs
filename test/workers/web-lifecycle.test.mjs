@@ -120,6 +120,7 @@ describe('apps/web boots and shuts down cleanly (epic P1 AE4)', () => {
     const started = result.stdout
       .trim()
       .split('\n')
+      .filter((line) => line.trimStart().startsWith('{'))
       .map((l) => JSON.parse(l))
       .find((l) => l.msg === 'web started');
 
