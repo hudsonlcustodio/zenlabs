@@ -69,9 +69,10 @@ jobs:
         if: always()
         shell: bash
         run: |
-          git diff -- .nvmrc package.json apps/web/package.json pnpm-lock.yaml > tech-foundation-candidate.patch || true
+          git diff -- .nvmrc package.json apps/web/package.json pnpm-workspace.yaml pnpm-lock.yaml > tech-foundation-candidate.patch || true
           cp package.json tech-package.json
           cp apps/web/package.json tech-web-package.json
+          cp pnpm-workspace.yaml tech-pnpm-workspace.yaml
           cp pnpm-lock.yaml tech-pnpm-lock.yaml || true
 
       - name: Upload candidate artifacts
@@ -84,4 +85,5 @@ jobs:
             tech-foundation-candidate.patch
             tech-package.json
             tech-web-package.json
+            tech-pnpm-workspace.yaml
             tech-pnpm-lock.yaml

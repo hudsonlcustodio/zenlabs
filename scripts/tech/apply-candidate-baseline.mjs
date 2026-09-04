@@ -11,6 +11,7 @@ function save(path, value) {
 const root = load('package.json');
 root.packageManager = 'pnpm@11.25.0';
 root.engines = { node: '>=24.20.0 <25', pnpm: '>=11.25.0 <12' };
+delete root.pnpm;
 if (root.devDependencies?.['@types/node']) {
   root.devDependencies['@types/node'] = '24.13.3';
 }
@@ -23,6 +24,20 @@ web.dependencies['react-dom'] = '19.2.8';
 save('apps/web/package.json', web);
 
 writeFileSync('.nvmrc', '24.20.0\n');
+
+writeFileSync(
+  'pnpm-workspace.yaml',
+  `packages:
+  - 'apps/*'
+  - 'packages/*'
+
+overrides:
+  postcss: 8.5.23
+
+allowBuilds:
+  esbuild: true
+`,
+);
 
 console.log('Candidate baseline applied to manifests.');
 console.log('Next: corepack enable && corepack prepare pnpm@11.25.0 --activate');

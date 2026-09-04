@@ -17,6 +17,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, it, expect } from 'vitest';
+import { parse } from 'yaml';
 
 const ROOT = process.cwd();
 
@@ -48,28 +49,31 @@ function compareVersions(a, b) {
 }
 
 const rootPackageJson = () => JSON.parse(readFileSync(join(ROOT, 'package.json'), 'utf8'));
+const workspaceConfig = () => parse(readFileSync(join(ROOT, 'pnpm-workspace.yaml'), 'utf8'));
+const securityOverrides = () =>
+  workspaceConfig().overrides ?? rootPackageJson().pnpm?.overrides ?? {};
 const lockfile = () => readFileSync(join(ROOT, 'pnpm-lock.yaml'), 'utf8');
 
 describe('security overrides are declared', () => {
-  it.each(SECURITY_OVERRIDES)('$name is overridden in package.json', ({ name, pinned }) => {
-    const overrides = rootPackageJson().pnpm?.overrides ?? {};
+  it.each(SECURITY_OVERRIDES)('$name is overridden in project configuration', ({ name, pinned }) => {
+    const overrides = securityOverrides();
     expect(
       overrides[name],
-      `pnpm.overrides.${name} is missing — the security pin was dropped`,
+      `overrides.${name} is missing — the security pin was dropped`,
     ).toBe(pinned);
   });
 
   it.each(SECURITY_OVERRIDES)(
     '$name pin is at or above the advisory patched floor',
     ({ name, minimum }) => {
-      const pin = rootPackageJson().pnpm?.overrides?.[name];
+      const pin = securityOverrides()[name];
       expect(compareVersions(pin, minimum), `${name}@${pin} is below ${minimum}`).toBeGreaterThanOrEqual(0);
     },
   );
 
-  it('the override mechanism is pnpm.overrides, not an audit suppression', () => {
+  it('uses a pnpm override, not an audit suppression', () => {
     const pkg = rootPackageJson();
-    expect(pkg.pnpm?.overrides).toBeDefined();
+    expect(securityOverrides()).toBeDefined();
     // No allowlisting, no severity relaxation anywhere in the repo's audit path.
     expect(pkg.pnpm?.auditConfig).toBeUndefined();
     expect(JSON.stringify(pkg)).not.toContain('--ignore');
