@@ -9,7 +9,7 @@ ZENLABS é uma plataforma de operação audiovisual baseada em identidade digita
 
 ## O que este repositório é
 
-Este repositório é a **ZENLABS Foundation V2**, construída a partir de uma auditoria e migração controlada do snapshot `vyra-main-FERNANDO-2.zip`.
+Este repositório é a **ZENLABS Foundation V2**, construída a partir de uma auditoria e migração controlada do snapshot `vyra-2.zip`.
 
 A base técnica reaproveitada inclui:
 
