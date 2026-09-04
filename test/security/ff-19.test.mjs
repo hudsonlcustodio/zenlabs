@@ -6,7 +6,7 @@
  * the property FF-19 exists to enforce, so the test must not violate it to
  * prove it.
  */
-import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
+import { mkdtempSync, mkdirSync, readFileSync, writeFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { spawnSync } from 'node:child_process';
@@ -152,24 +152,18 @@ describe('FF-19 — redaction and false positives', () => {
 
 describe('history scanning is configured, not only diff scanning (AC-3)', () => {
   it('the scanner invokes gitleaks with --no-git=false', () => {
-    const source = String(
-      spawnSync('cat', [SCANNER], { encoding: 'utf8' }).stdout ?? '',
-    );
+    const source = readFileSync(SCANNER, 'utf8');
     expect(source).toContain('--no-git=false');
     expect(source).toContain('--redact');
   });
 
   it('CI checks out full history for the security/static stage', () => {
-    const workflow = spawnSync('cat', [join(ROOT, '.github/workflows/ci.yml')], {
-      encoding: 'utf8',
-    }).stdout;
+    const workflow = readFileSync(join(ROOT, '.github/workflows/ci.yml'), 'utf8');
     expect(workflow).toContain('fetch-depth: 0');
   });
 
   it('a pre-commit hook is present and scans staged changes (ADR-0022)', () => {
-    const hook = spawnSync('cat', [join(ROOT, '.githooks/pre-commit')], {
-      encoding: 'utf8',
-    }).stdout;
+    const hook = readFileSync(join(ROOT, '.githooks/pre-commit'), 'utf8');
     expect(hook).toContain('ff-19-no-committed-secret.mjs');
     expect(hook).toContain('--staged');
   });

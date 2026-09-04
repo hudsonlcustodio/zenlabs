@@ -27,6 +27,12 @@ paths = [
   '''^scripts/fitness/lib/secret-scan\.mjs$''',
   '''^scripts/fitness/ff-19-no-committed-secret\.mjs$''',
   '''^test/security/ff-19\.test\.mjs$''',
+  # These contract tests contain a deterministic fake idempotency token. The
+  # generic-api-key rule matched it in historical commits even though it is not
+  # a credential. Keep the exception path-scoped so production source remains
+  # fully covered by the history scan.
+  '''^packages/providers/test/media-plane\.test\.ts$''',
+  '''^packages/providers/test/simulated-adapters\.test\.ts$''',
   '''^\.gitleaks\.toml$''',
 ]
 
